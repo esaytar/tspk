@@ -1,0 +1,13 @@
+.picture {
+    background-image: url('../../../assets/tspk.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media screen and (min-width: 1024px) {
+    div > button > img {
+        width: 21px;
+        height: 21px;
+    }
+}

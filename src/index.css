@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+input, textarea {outline: none;}
+
+:root {font-size: 14px;}
+@media screen and (min-width: 768px) {
+    :root {font-size: 15px;}
+}
+@media screen and (min-width: 1280px) {
+    :root {font-size: 16px;}
+}
