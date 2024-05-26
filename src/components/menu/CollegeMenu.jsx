@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function CollegeMenu({ulID, index, main, gap}) {
-
     const items = [
         [
             {

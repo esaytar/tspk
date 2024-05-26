@@ -11,7 +11,7 @@ export default function DataCollegeMenu({main, liW, ulID, index}) {
         {
             classes: true,
             value: 'Структура и органы управления образовательной организацией',
-            link: ''
+            link: '/structure-college'
         },
         {
             classes: false,

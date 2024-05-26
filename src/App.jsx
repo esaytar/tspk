@@ -7,6 +7,7 @@ import ContactsPage from '../public/pages/ContactsPage'
 import Footer from './components/Footer'
 import MarqueeBlock from './components/MarqueeBlock'
 import BasicDataPage from '../public/pages/college-info/BasicDataPage'
+import ManagementStructurePage from '../public/pages/college-info/ManagementStructurePage'
 
 function App() {
     const menuRef = useRef(null);
@@ -24,6 +25,7 @@ function App() {
                 <Route path='/' element={<MainPage/>}></Route>
                 <Route path='/contacts' element={<ContactsPage/>}></Route>
                 <Route path='/basic-data' element={<BasicDataPage/>}></Route>
+                <Route path='/structure-college' element={<ManagementStructurePage/>}></Route>
             </Routes> 
             <MarqueeBlock/>
             <Footer/>

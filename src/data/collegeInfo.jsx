@@ -1,6 +1,7 @@
 import doc from '../assets/icons/doc_icon.svg'
+import docPDF from '../assets/icons/doc_pdf.svg'
 
-const basicInfo = [
+export const basicInfo = [
     {
         title: 'Полное и сокращенное (при наличии) наименование образовательной организации',
         content: [
@@ -97,15 +98,15 @@ const basicInfo = [
             [
                 <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5 mt-2">Места осуществления образовательной деятельности при использовании сетевой формы реализации образовательных программ</p>,
                 <p className="px-2.5 flex flex-col gap-2.5">
-                    <a href='https://tspk.org/images/Local_act/Polozenie_o_setevoy_forme.pdf' className='flex gap-1 items-center underline'><img src={doc} alt="" />Положение сетевой форме реализации образовательных программ в ГАПОУ ТСПК</a>  
-                    <a href='https://tspk.org/images/veduziykollege/reglamnt_setevogo_vzaim.pdf' className='flex gap-1 items-center underline'><img src={doc} alt="" />Регламент сетевого взаимодействия ведущего колледжа с профильными профессиональными образовательными организациями</a>  
-                    <a href='https://tspk.org/images/Local_act/Polozenie_o_setevoy_forme.pdf' className='flex gap-1 items-center underline'><img src={doc} alt="" />Положение о центре сетевого взаимодействия ГАПОУ ТСПК</a>  
+                    <a href='https://tspk.org/images/Local_act/Polozenie_o_setevoy_forme.pdf' className='flex gap-1 items-center underline'><img src={doc} alt="документ" />Положение сетевой форме реализации образовательных программ в ГАПОУ ТСПК</a>  
+                    <a href='https://tspk.org/images/veduziykollege/reglamnt_setevogo_vzaim.pdf' className='flex gap-1 items-center underline'><img src={doc} alt="документ" />Регламент сетевого взаимодействия ведущего колледжа с профильными профессиональными образовательными организациями</a>  
+                    <a href='https://tspk.org/images/Local_act/Polozenie_o_setevoy_forme.pdf' className='flex gap-1 items-center underline'><img src={doc} alt="документ" />Положение о центре сетевого взаимодействия ГАПОУ ТСПК</a>  
                 </p>
             ],
             [
                 <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5 mt-2">Места проведения практики</p>,
                 <p className="px-2.5 flex flex-col gap-2.5">
-                    <a href='' className='flex gap-1 items-center underline'><img src={doc} alt="" />Места проведения практики</a>  
+                    <a href='' className='flex gap-1 items-center underline'><img src={doc} alt="документ" />Места проведения практики</a>  
                 </p>
             ],
             [
@@ -120,4 +121,42 @@ const basicInfo = [
     }
 ]
 
-export default basicInfo
+export const structureInfo = [
+    {
+        title: 'Информация о структуре и об органах управления образовательной организации',
+        content: <a className='flex items-center underline gap-1' href="https://tspk.org/images/oficial_dokument_2016/struktura.pdf"><img src={docPDF} alt="PDF-файл" /> Просмотр</a>
+    },
+    {
+        title: 'Наименование структурных подразделений (органов управления) при наличии',
+        content: [
+            'Наименование структурного подразделения: Учебно-производственный комплекс (УПК)',
+            'Информация о руководителях структурных подразделений: Михайловская Татьяна Александровна',
+            <p>Должность: Зав. отделением специальности преподавание в начальных классах к.п.н.тел.: 8 (8482) 24-10-25e-mail: <a className='underline' href="mailto:so_tspk@samara.edu.ru">so_tspk@samara.edu.ru</a></p>,
+            'Местонахождение структурных подразделений: Российская Федерация, 445012, Самарская область, г. Тольятти, ул. Мурысева, 84 (учебный корпус № 1)',
+            <p>Адрес официального сайта в информационно-телекоммуникационной сети "Интернет" структурных подразделений (органов управления) образовательной организации: <a className='underline' href='https://tspk.org'>https://tspk.org</a></p>,
+            <a className='flex items-center underline gap-1' href="https://tspk.org/images/Local_act/Polozenie_o_strukturnom_podrazdelenii.pdf"><img src={docPDF} alt="PDF-файл" /> Положение о структурном подразделении</a>
+        ]
+    }, 
+    {
+        title: 'Наблюдательный совет',
+        content: [
+            <a className='flex items-center underline gap-1' href="https://tspk.org/images/Local_act/Polozenie_o_nabludatelnom_sovete.pdf"><img src={docPDF} alt="PDF-файл" /> Положение о Наблюдательном совете</a>,
+            <a className='flex items-center underline gap-1' href="https://tspk.org/images/Local_act/Prikaz_o_nabl_sovete.pdf"><img src={docPDF} alt="PDF-файл" /> Приказ об утверждении состава о Наблюдательном совете</a>,
+            <a className='flex items-center underline gap-1' href="https://tspk.org/images/Local_act/Polozenie_o_nabludatelnom_sovete_dopolnenie.pdf"><img src={docPDF} alt="PDF-файл" /> Дополнение к положению о наблюдательном совете</a>,
+            <a className='flex items-center underline gap-1' href="https://tspk.org/images/Local_act/izmenenia_nabl_sovet_705-od.pdf"><img src={docPDF} alt="PDF-файл" />Приказ № 322-од от 20.05.2024 о внесении изменений в приказ МО и Н СО от 20.09.2019 № 300-од</a>,
+            <a className='flex items-center underline gap-1' href="https://tspk.org/images/Local_act/Ob_izm_v_sostav_nab_soveta_13-od.pdf"><img src={docPDF} alt="PDF-файл" />Приказ 670-од от 04.04.2023 о внесении изменений в отдельные приказы МО и Н СО</a>
+        ]
+    }, 
+    {
+        title: 'Конференция работников и обучающихся образовательной организации',
+        content: <a className='flex items-center underline gap-1' href="https://tspk.org/images/Local_act/Polozenie_o_konf.pdf"> <img src={docPDF} alt="PDF-файл" /> Положение о Конференции работников и обучающихся образовательной организацииложение о Конференции работников и обучающихся образовательной организации</a>
+    }, 
+    {
+        title: 'Совет колледжа образовательной организации',
+        content: <a className='flex items-center underline gap-1' href="https://tspk.org/images/Local_act/Polozenie_o_sovete_uchrezdenia.pdf"> <img src={docPDF} alt="PDF-файл" /> Положение о Совете колледжа образовательной организации</a>
+    },
+    {
+        title: 'Педагогический совет образовательной организации',
+        content: <a className='flex items-center underline gap-1' href="https://tspk.org/images/Local_act/Polozenie_o_pedagogicheskom_sovete.pdf"> <img src={docPDF} alt="PDF-файл" /> Положение о педагогическом совете образовательной организации</a>
+    },
+]

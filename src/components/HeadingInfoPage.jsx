@@ -1,10 +1,10 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import { useState, useRef, useEffect } from 'react';
 import ArrowBottom from '../assets/icons/components/ArrowBottom';
 
-export default function HeadingInfoPage({listRef}) {
+export default function HeadingInfoPage({listRef, titleList}) {
     const [isOpened, setIsOpened] = useState(false)
-    const [titleList, setTitleList] = useState('Основные сведения')
 
     useEffect(() => {
         function handleClickOutside(event) {
@@ -18,11 +18,6 @@ export default function HeadingInfoPage({listRef}) {
         };
     }, []);
 
-    
-    const selectPage = (e) => {
-        setTitleList(e.target.textContent)
-    }
-
     return (
         <div className='w-full flex justify-between items-center flex-col lg:flex-row gap-[1.43rem]'>
             <h1 className='lg:text-[1.81rem] text-grayMainText font-semibold lg:w-10/12 text-[1.28rem]'>Сведения об образовательной организации</h1>
@@ -31,9 +26,9 @@ export default function HeadingInfoPage({listRef}) {
                     <p className='text-mainBlue '>{titleList}</p>
                     <ArrowBottom style='stroke-mainBlue w-[23px] h-[12px]'/> 
                 </div>
-                <ul onClick={selectPage} className={`${isOpened ? 'flex' : 'hidden'} absolute flex-col lg:px-10 lg:py-5 p-[1.43rem] bg-white text-mainBlue gap-5 rounded-[2.5rem] z-20 mt-2.5 shadow-newShad`}>
-                    <li><a href="">Основные сведения</a></li>
-                    <li><a href="">Структура и органы управления образовательной организацией</a></li>
+                <ul  className={`${isOpened ? 'flex' : 'hidden'} absolute flex-col lg:px-10 lg:py-5 p-[1.43rem] bg-white text-mainBlue gap-5 rounded-[1.43rem] lg:rounded-[2.5rem] z-20 mt-2.5 shadow-newShad`}>
+                    <li><Link to="/basic-data">Основные сведения</Link></li>
+                    <li><Link to="/structure-college">Структура и органы управления образовательной организацией</Link></li>
                     <li><a href="">Документы</a></li>
                     <li><a href="">Образование</a></li>
                     <li><a href="">Образовательные стандарты и требования</a></li>
