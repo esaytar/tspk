@@ -16,9 +16,7 @@ export default function NewsBlock() {
             if (!response.ok) {
                 throw new Error(`Network response was not ok: ${response.statusText}`);
             }
-            let data = await response.json();
-            console.log('Data:', data); 
-            console.log(data.response.items)
+            let data = await response.json()
             const news = data.response.items.map((item, index) => (
                 <swiper-slide>
                     <NewsCard
@@ -30,6 +28,8 @@ export default function NewsBlock() {
                     {console.log(item)}
                 </swiper-slide>
             ))
+            console.log('Data:', data)
+            console.log(data.response.items)
             return news
         } catch (error) {
             console.error('There was a problem with your fetch operation:', error);
