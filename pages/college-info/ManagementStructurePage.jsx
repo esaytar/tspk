@@ -1,5 +1,5 @@
 import {React, useRef } from 'react'
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import HeadingInfoPage from '../../../src/components/HeadingInfoPage';
 import {structureInfo} from '../../../src/data/collegeInfo.jsx'
 import InfoString from '../../../src/components/InfoString.jsx';

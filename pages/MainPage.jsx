@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 import HeadBlock from '../../src/blocks/mainPage/HeadBlock/HeadBlock'
 import QuickAccessBlock from '../../src/blocks/mainPage/QuickAccessBlock'
 import NewsBlock from '../../src/blocks/mainPage/NewsBlock'
