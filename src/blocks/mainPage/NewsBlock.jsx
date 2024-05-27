@@ -27,6 +27,7 @@ export default function NewsBlock() {
                         date={convertToNormalDate(item.date)}
                         link={`https://vk.com/tspk63?w=wall${item.owner_id}${item.id}`}
                     /> 
+                    {console.log(item)}
                 </swiper-slide>
             ))
             return news
