@@ -21,9 +21,22 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git fetch origin gh-pages  # Получение последних изменений из удаленной ветки gh-pages
-        git checkout gh-pages  # Переключение на ветку gh-pages
-        git pull origin gh-pages --no-rebase  # Получение последних изменений с использованием слияния
+       
+        # Сохраните изменения в текущей ветке (main)
         git add data.json
+        git commit -m 'Temporary commit for switching branches'
+
+        # Переключение на ветку gh-pages
+        git fetch origin gh-pages
+        git checkout gh-pages
+
+        # Объедините изменения из main в gh-pages
+        git merge main --no-ff --no-rebase
+
+        # Закоммитьте и отправьте изменения на удаленный репозиторий
         git commit -m 'Update VK Data'
-        git push origin gh-pages  # Отправка изменений на удаленный репозиторий
+        git push origin gh-pages
+
+        # Вернитесь на main и отмените временный коммит
+        git checkout main
+        git reset --hard HEAD~1
