@@ -22,7 +22,6 @@ jobs:
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
        
-        # Сохраните изменения в текущей ветке (main)
         git add data.json
         git commit -m 'Temporary commit for switching branches'
 
@@ -31,7 +30,7 @@ jobs:
         git checkout gh-pages
 
         # Объедините изменения из main в gh-pages
-        git merge main
+        git merge main --allow-unrelated-histories
 
         # Закоммитьте и отправьте изменения на удаленный репозиторий
         git commit -m 'Update VK Data'
