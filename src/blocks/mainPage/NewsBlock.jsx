@@ -16,22 +16,17 @@ export default function NewsBlock() {
                     'Content-Type': 'application/json'
                 }
             });
-    
-            console.log('Response:', response); // Отладочное сообщение для проверки ответа
-    
             if (!response.ok) {
                 throw new Error(`Network response was not ok: ${response.statusText}`);
             }
-    
             const data = await response.json();
             console.log('Data:', data); // Отладочное сообщение для проверки данных
         } catch (error) {
             console.error('There was a problem with your fetch operation:', error);
         }
     }
-
     fetchData();
-      
+    
     const swiperRef = useRef(null);
 
     useEffect(() => {
@@ -61,6 +56,20 @@ export default function NewsBlock() {
         swiperContainer.initialize();
     }, []);
 
+    const convertToNormalDate = (num) => {
+        const date = new Date(num * 1000)
+        const readableDate = date.toLocaleString('ru-RU', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        });
+
+        return readableDate
+    }
+
     return (
         <div className='flex flex-col lg:gap-10 gap-[1.43rem] w-full'> 
             <p className='text-grayText text-[1.29rem] lg:text-[1.81rem] font-semibold '>Новости</p>
@@ -74,14 +83,18 @@ export default function NewsBlock() {
                         pagination="true"
                         space-between="10"
                         >
-                            <swiper-slide><NewsCard/></swiper-slide>
-                            <swiper-slide><NewsCard/></swiper-slide>
-                            <swiper-slide><NewsCard/></swiper-slide>
-                            <swiper-slide><NewsCard/></swiper-slide>
-                            <swiper-slide><NewsCard/></swiper-slide>
-                            <swiper-slide><NewsCard/></swiper-slide>
-                            <swiper-slide><NewsCard/></swiper-slide>
-                            <swiper-slide><NewsCard/></swiper-slide>
+                            {
+                                data.items.map((item, index) => (
+                                    <swiper-slide>
+                                        <NewsCard
+                                            key={index}
+                                            text={item.text}
+                                            date={convertToNormalDate(item.date)}
+                                            link={`https://vk.com/tspk63?w=wall${item.owner_id}${id}`}
+                                        /> 
+                                    </swiper-slide>
+                                ))
+                            }
                     </swiper-container>
                 </div>
             </div>
