@@ -21,8 +21,8 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git checkout -b gh-pages
-        git pull origin gh-pages
+        git checkout gh-pages  
+        git pull origin gh-pages --no-rebase  # Получение последних изменений с использованием слияния
         git add data.json
         git commit -m 'Update VK Data'
-        git push origin gh-pages
+        git push origin gh-pages 
