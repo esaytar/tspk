@@ -18,11 +18,10 @@ export default function NewsBlock() {
             }
             let data = await response.json();
             console.log('Data:', data); 
+            return data
         } catch (error) {
             console.error('There was a problem with your fetch operation:', error);
         }
-
-        return data
     }
 
     fetchData();
