@@ -28,8 +28,8 @@ export default function NewsBlock() {
                     {console.log(item)}
                 </swiper-slide>
             ))
-            console.log('Data:', data)
-            console.log(data.response.items)
+            // console.log('Data:', data)
+            // console.log(data.response.items)
             return news
         } catch (error) {
             console.error('There was a problem with your fetch operation:', error);
