@@ -22,6 +22,18 @@ export default function NewsBlock() {
         } catch (error) {
             console.error('There was a problem with your fetch operation:', error);
         }
+
+        const news = data.items.map((item, index) => (
+            <swiper-slide>
+                <NewsCard
+                    key={index}
+                    text={item.text}
+                    date={convertToNormalDate(item.date)}
+                    link={`https://vk.com/tspk63?w=wall${item.owner_id}${id}`}
+                /> 
+            </swiper-slide>
+        ))
+        return news
     }
 
     fetchData();
@@ -83,16 +95,7 @@ export default function NewsBlock() {
                         space-between="10"
                         >
                             {
-                                data.items.map((item, index) => (
-                                    <swiper-slide>
-                                        <NewsCard
-                                            key={index}
-                                            text={item.text}
-                                            date={convertToNormalDate(item.date)}
-                                            link={`https://vk.com/tspk63?w=wall${item.owner_id}${id}`}
-                                        /> 
-                                    </swiper-slide>
-                                ))
+                                fetchData
                             }
                     </swiper-container>
                 </div>
