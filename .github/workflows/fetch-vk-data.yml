@@ -28,9 +28,9 @@ jobs:
         git fetch origin gh-pages
         git checkout gh-pages
 
-        git merge main --allow-unrelated-histories
+        # git merge main --allow-unrelated-histories
 
         git push origin gh-pages
         
-        git checkout main
-        git reset --hard HEAD~1
+        # git checkout main
+        # git reset --hard HEAD~1
