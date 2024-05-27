@@ -27,7 +27,7 @@ export default function NewsBlock() {
                             key={index}
                             text={item.text}
                             date={convertToNormalDate(item.date)}
-                            link={`https://vk.com/tspk63?w=wall${item.owner_id}${item.id}`}
+                            link={`https://vk.com/tspk63?w=wall${item.owner_id}_${item.id}`}
                             img={item.attachments[0].photo.sizes[4].url}
                         /> 
                         {console.log(item)}
