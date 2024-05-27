@@ -14,51 +14,63 @@ import wsr from '../assets/icons/cards/wsr.svg'
 const cardsInfo = [
     {
         name: 'Сведения об образовательной организации',
-        image: info
+        image: info,
+        link: '/basic-info'
     },
     {
         name: 'Расписание занятий',
-        image: timetable
+        image: timetable,
+        link: ''
     },
     {
         name: 'Приемная комиссия',
-        image: people
+        image: people,
+        link: ''
     },
     {
         name: 'Наши специальности',
-        image: bag
+        image: bag,
+        link: ''
     },
     {
         name: 'Дополнительное профессиональное образование',
-        image: fire
+        image: fire,
+        link: ''
     },
     {
         name: 'Проф. мастерство Профессионалы',
-        image: wsr
+        image: wsr,
+        link: ''
     },
     {
         name: 'Дуальное обучение',
-        image: puzzle
+        image: puzzle,
+        link: ''
     },
     {
         name: 'Содействие трудойстройству выпускников',
-        image: way
+        image: way,
+        link: ''
     },
     {
         name: 'Система дистанционного обучения Moodle',
-        image: moodle
+        image: moodle,
+        link: ''
     },
     {
         name: 'Перечень онлайн курсов',
-        image: courses
+        image: courses,
+        link: ''
     },
     {
         name: 'Электронная система АСУ РСО',
-        image: asurso
+        image: asurso,
+        link: ''
     },
     {
         name: `Заказать справку`,
-        image: docs
+        image: docs,
+        link: ''
     }
 ]
 
