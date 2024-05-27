@@ -36,7 +36,7 @@ export default function NewsBlock() {
         }
     }
 
-    fetchData();
+    // fetchData();
     
     const swiperRef = useRef(null);
 
@@ -95,7 +95,7 @@ export default function NewsBlock() {
                         space-between="10"
                         >
                             {
-                                fetchData
+                                fetchData()
                             }
                     </swiper-container>
                 </div>
