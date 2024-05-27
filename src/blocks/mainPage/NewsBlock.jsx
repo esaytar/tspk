@@ -17,23 +17,21 @@ export default function NewsBlock() {
                 throw new Error(`Network response was not ok: ${response.statusText}`);
             }
             let data = await response.json();
+            const news = data.items.map((item, index) => (
+                <swiper-slide>
+                    <NewsCard
+                        key={index}
+                        text={item.text}
+                        date={convertToNormalDate(item.date)}
+                        link={`https://vk.com/tspk63?w=wall${item.owner_id}${id}`}
+                    /> 
+                </swiper-slide>
+            ))
             // console.log('Data:', data); 
-            return data
+            return news
         } catch (error) {
             console.error('There was a problem with your fetch operation:', error);
         }
-
-        const news = data.items.map((item, index) => (
-            <swiper-slide>
-                <NewsCard
-                    key={index}
-                    text={item.text}
-                    date={convertToNormalDate(item.date)}
-                    link={`https://vk.com/tspk63?w=wall${item.owner_id}${id}`}
-                /> 
-            </swiper-slide>
-        ))
-        return news
     }
 
     fetchData();
