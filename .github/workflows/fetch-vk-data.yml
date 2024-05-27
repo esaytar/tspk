@@ -24,4 +24,4 @@ jobs:
         git checkout -b gh-pages
         git add data.json
         git commit -m 'Update VK Data'
-        git push https://github.com/esaytar/tspk.git HEAD:main
+        git push origin gh-pages
