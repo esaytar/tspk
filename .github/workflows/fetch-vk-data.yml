@@ -21,16 +21,21 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-
         git add data.json
-        git commit -m 'Temporary commit for switching branches'
+        git commit -m 'Update data.json with new VK data'
+        git push origin main
 
-        git fetch origin gh-pages
+    - name: Checkout gh-pages
+      run: |
+        git fetch origin
         git checkout gh-pages
 
-        # git merge main --allow-unrelated-histories
+    - name: Copy data.json from main to gh-pages
+      run: |
+        git checkout main -- data.json
 
+    - name: Commit and push to gh-pages
+      run: |
+        git add data.json
+        git commit -m 'Update data.json with new VK data'
         git push origin gh-pages
-        
-        # git checkout main
-        # git reset --hard HEAD~1
