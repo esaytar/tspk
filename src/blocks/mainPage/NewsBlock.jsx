@@ -7,9 +7,9 @@ register();
 export default function NewsBlock() {
     
     // const url = 'https://api.vk.com/method/wall.get?owner_id=174700694&domain=tspk63&offset=1&count=5&access_token=664330a8664330a8664330a8fa6638f9f566643664330a8047988401142e3fe7c189a9a&filter=owner&v=5.236'
-    const data = {}
-
+   
     useEffect(() => {
+        const data = {}
         fetchData();
         async function fetchData() {
             try {
