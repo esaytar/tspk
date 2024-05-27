@@ -2,8 +2,8 @@ name: Fetch VK Data
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Запуск каждый час
-  workflow_dispatch:     # Это позволяет запускать workflow вручную
+    - cron: '0 * * * *'  
+  workflow_dispatch:     
 
 jobs:
   build:
@@ -22,20 +22,15 @@ jobs:
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-        # Сохраните изменения в текущей ветке (main)
         git add data.json
         git commit -m 'Temporary commit for switching branches'
 
-        # Переключение на ветку gh-pages
         git fetch origin gh-pages
         git checkout gh-pages
 
-        # Объедините изменения из main в gh-pages
         git merge main --allow-unrelated-histories
 
-        # Закоммитьте изменения и отправьте их на удаленный репозиторий
         git push origin gh-pages
-
-        # Вернитесь на main и отмените временный коммит
+        
         git checkout main
         git reset --hard HEAD~1
