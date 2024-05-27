@@ -5,9 +5,6 @@ import { register } from 'swiper/element/bundle'
 register();
 
 export default function NewsBlock() {
-    
-    // const url = 'https://api.vk.com/method/wall.get?owner_id=174700694&domain=tspk63&offset=1&count=5&access_token=664330a8664330a8664330a8fa6638f9f566643664330a8047988401142e3fe7c189a9a&filter=owner&v=5.236'
-
     async function fetchData() {
         try {
             const response = await fetch('https://esaytar.github.io/tspk/data.json', {
@@ -20,12 +17,14 @@ export default function NewsBlock() {
                 throw new Error(`Network response was not ok: ${response.statusText}`);
             }
             let data = await response.json();
-            console.log('Data:', data); // Отладочное сообщение для проверки данных
+            console.log('Data:', data); 
         } catch (error) {
             console.error('There was a problem with your fetch operation:', error);
         }
+
+        return data
     }
-    
+
     fetchData();
     
     const swiperRef = useRef(null);
