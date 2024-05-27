@@ -31,7 +31,7 @@ jobs:
         git checkout gh-pages
 
         # Объедините изменения из main в gh-pages
-        git merge main --no-ff --no-rebase
+        git merge main
 
         # Закоммитьте и отправьте изменения на удаленный репозиторий
         git commit -m 'Update VK Data'
