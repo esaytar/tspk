@@ -16,17 +16,20 @@ export default function NewsBlock() {
                     'Content-Type': 'application/json'
                 }
             });
+    
+            console.log('Response:', response); // Отладочное сообщение для проверки ответа
+    
             if (!response.ok) {
-                console.log(response)
-                throw new Error('Network response was not ok');
+                throw new Error(`Network response was not ok: ${response.statusText}`);
             }
+    
             const data = await response.json();
-            console.log(data);
+            console.log('Data:', data); // Отладочное сообщение для проверки данных
         } catch (error) {
             console.error('There was a problem with your fetch operation:', error);
         }
-      }
-      
+    }
+
     fetchData();
       
     const swiperRef = useRef(null);
