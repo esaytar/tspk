@@ -3,7 +3,7 @@ name: Fetch VK Data
 on:
   schedule:
     - cron: '0 * * * *'  # Запуск каждый час
-  workflow_dispatch:
+  workflow_dispatch:     # Это позволяет запускать workflow вручную
 
 jobs:
   build:
