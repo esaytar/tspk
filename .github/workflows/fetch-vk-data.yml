@@ -1,0 +1,26 @@
+name: Fetch VK Data
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Запуск каждый час
+  workflow_dispatch:     # Это позволяет запускать workflow вручную
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Fetch VK Data
+      run: |
+        curl "https://api.vk.com/method/wall.get?owner_id=174700694&domain=tspk63&offset=1&count=5&access_token=664330a8664330a8664330a8fa6638f9f566643664330a8047988401142e3fe7c189a9a&filter=owner&v=5.236" -o data.json
+
+    - name: Commit and Push
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add data.json
+        git commit -m 'Update VK Data'
+        git push
