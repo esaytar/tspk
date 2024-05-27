@@ -21,6 +21,7 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git checkout -b gh-pages
         git add data.json
         git commit -m 'Update VK Data'
         git push https://github.com/esaytar/tspk.git HEAD:main
