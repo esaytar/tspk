@@ -12,6 +12,13 @@
 
 input, textarea {outline: none;}
 
+.slider-item__text {
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 :root {font-size: 14px;}
 @media screen and (min-width: 768px) {
     :root {font-size: 15px;}
