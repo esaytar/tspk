@@ -20,19 +20,19 @@ export default function NewsBlock() {
                     throw new Error(`Network response was not ok: ${response.statusText}`);
                 }
                 let data = await response.json()
-                setNews(() => {
-                    data.response.items.map((item, index) => (
-                        <swiper-slide>
-                            <NewsCard
-                                key={index}
-                                text={item.text}
-                                date={convertToNormalDate(item.date)}
-                                link={`https://vk.com/tspk63?w=wall${item.owner_id}${item.id}`}
-                            /> 
-                            {console.log(item)}
-                        </swiper-slide>
-                    ))
-                })
+
+                const newsItems = data.response.items.map((item, index) => (
+                    <swiper-slide>
+                        <NewsCard
+                            key={index}
+                            text={item.text}
+                            date={convertToNormalDate(item.date)}
+                            link={`https://vk.com/tspk63?w=wall${item.owner_id}${item.id}`}
+                        /> 
+                        {console.log(item)}
+                    </swiper-slide>
+                ))
+                setNews(newsItems)
                 // console.log('Data:', data)
                 // console.log(data.response.items)
             } catch (error) {
