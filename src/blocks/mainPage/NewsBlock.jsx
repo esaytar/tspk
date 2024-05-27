@@ -18,6 +18,7 @@ export default function NewsBlock() {
             }
             let data = await response.json();
             console.log('Data:', data); 
+            console.log(data.response.items)
             const news = data.response.items.map((item, index) => (
                 <swiper-slide>
                     <NewsCard
