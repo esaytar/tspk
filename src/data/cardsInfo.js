@@ -15,7 +15,7 @@ const cardsInfo = [
     {
         name: 'Сведения об образовательной организации',
         image: info,
-        link: '/basic-info'
+        link: '/basic-data'
     },
     {
         name: 'Расписание занятий',
