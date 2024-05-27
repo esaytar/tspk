@@ -24,7 +24,7 @@ export default function NewsBlock() {
                         key={index}
                         text={item.text}
                         date={convertToNormalDate(item.date)}
-                        link={`https://vk.com/tspk63?w=wall${item.owner_id}${id}`}
+                        link={`https://vk.com/tspk63?w=wall${item.owner_id}${item.id}`}
                     /> 
                 </swiper-slide>
             ))
