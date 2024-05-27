@@ -42,7 +42,7 @@ export default function NewsBlock() {
     
         fetchData();
 
-    })
+    }, [])
 
     
     const swiperRef = useRef(null);
