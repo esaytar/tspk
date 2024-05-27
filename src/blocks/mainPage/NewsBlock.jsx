@@ -1,42 +1,49 @@
-import React, {useEffect, useRef} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import NewsCard from '../../components/NewsCard'
 import { register } from 'swiper/element/bundle'
 
 register();
 
 export default function NewsBlock() {
-    async function fetchData() {
-        try {
-            const response = await fetch('https://esaytar.github.io/tspk/data.json', {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            });
-            if (!response.ok) {
-                throw new Error(`Network response was not ok: ${response.statusText}`);
-            }
-            let data = await response.json()
-            const news = data.response.items.map((item, index) => (
-                <swiper-slide>
-                    <NewsCard
-                        key={index}
-                        text={item.text}
-                        date={convertToNormalDate(item.date)}
-                        link={`https://vk.com/tspk63?w=wall${item.owner_id}${item.id}`}
-                    /> 
-                    {console.log(item)}
-                </swiper-slide>
-            ))
-            // console.log('Data:', data)
-            // console.log(data.response.items)
-            return news
-        } catch (error) {
-            console.error('There was a problem with your fetch operation:', error);
-        }
-    }
+    const [news, setNews] = useState(null)
 
-    // fetchData();
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const response = await fetch('https://esaytar.github.io/tspk/data.json', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                if (!response.ok) {
+                    throw new Error(`Network response was not ok: ${response.statusText}`);
+                }
+                let data = await response.json()
+                setNews(() => {
+                    data.response.items.map((item, index) => (
+                        <swiper-slide>
+                            <NewsCard
+                                key={index}
+                                text={item.text}
+                                date={convertToNormalDate(item.date)}
+                                link={`https://vk.com/tspk63?w=wall${item.owner_id}${item.id}`}
+                            /> 
+                            {console.log(item)}
+                        </swiper-slide>
+                    ))
+                })
+                // console.log('Data:', data)
+                // console.log(data.response.items)
+            } catch (error) {
+                console.error('There was a problem with your fetch operation:', error);
+            }
+        }
+    
+        fetchData();
+
+    })
+
     
     const swiperRef = useRef(null);
 
@@ -95,7 +102,7 @@ export default function NewsBlock() {
                         space-between="10"
                         >
                             {
-                                fetchData()
+                                news
                             }
                     </swiper-container>
                 </div>
