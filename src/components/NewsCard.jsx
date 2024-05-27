@@ -4,7 +4,7 @@ import newsImg from '../assets/news-img.jpg'
 export default function NewsCard({text, date, link, img}) {
     return (
         <div className='flex flex-col gap-5 rounded-[1rem] shadow-newShad lg:shadow-none p-[1.07rem] lg:p-0'>
-            <img src={img} alt="новость" className='rounded-[0.625rem] order-1 h-[14rem] object-cover' />
+            <img src={img} alt="новость" className='rounded-[0.625rem] order-1 lg:order-none h-[14rem] object-cover' />
             <div className="flex flex-col gap-5 items-start">
                 <div className="flex flex-col gap-2.5 max-w-full">
                     <p className='text-mainBlue'>{date}</p>
