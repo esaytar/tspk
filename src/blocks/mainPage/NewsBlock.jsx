@@ -46,20 +46,15 @@ export default function NewsBlock() {
     }, [])
 
     function findMaxSizes(array) {
-        // let sizesArray = []
-        // array.map((item) => {
-        //     sizesArray.push(item.width)
-        // })
-        // return Math.max.apply(null, sizesArray)
         let prevItem = 0
         let url = ''
         array.map(item => {
-            if (prevItem === 0) prevItem = item.width
-            if (item.width > prevItem) {
+            // if (prevItem === 0) prevItem = item.width
+            if (480 <= item.width <= 600) {
                 url = item.url
-                prevItem = item.width
+                // prevItem = item.width
             } 
-            console.log(prevItem, item.width, url)  
+            console.log(item.width, url)  
         })
         return url
     }
