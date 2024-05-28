@@ -16,6 +16,7 @@ function App() {
 
     useEffect(() => {
         location.pathname === '/' ? setIsMain(false) : setIsMain(true)
+        window.scrollTo(0, 0);
     }, [location])
 
     return (
