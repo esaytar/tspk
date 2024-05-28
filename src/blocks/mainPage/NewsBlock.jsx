@@ -58,10 +58,9 @@ export default function NewsBlock() {
             if (item.width > prevItem) {
                 url = item.url
             } else prevItem = item.width
-            console.log(prevItem, item.width)
-
-            return url
+            console.log(prevItem, item.width, url)  
         })
+        return url
     }
     
     const swiperRef = useRef(null);
