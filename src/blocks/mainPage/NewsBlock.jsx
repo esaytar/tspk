@@ -57,7 +57,8 @@ export default function NewsBlock() {
             if (prevItem === 0) prevItem = item.width
             if (item.width > prevItem) {
                 url = item.url
-            } else prevItem = item.width
+            } 
+            prevItem = item.width
             console.log(prevItem, item.width, url)  
         })
         return url
