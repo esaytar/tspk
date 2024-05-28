@@ -28,7 +28,7 @@ export default function NewsBlock() {
                             text={item.text}
                             date={convertToNormalDate(item.date)}
                             link={`https://vk.com/tspk63?w=wall${item.owner_id}_${item.id}`}
-                            img={item.attachments[0].photo.sizes[4].url}
+                            img={findMaxSizes(item.attachments.photo.sizes)}
                         /> 
                         {console.log(item)}
                     </swiper-slide>
@@ -45,6 +45,24 @@ export default function NewsBlock() {
 
     }, [])
 
+    function findMaxSizes(array) {
+        // let sizesArray = []
+        // array.map((item) => {
+        //     sizesArray.push(item.width)
+        // })
+        // return Math.max.apply(null, sizesArray)
+        let prevItem = 0
+        let url = ''
+        array.map(item => {
+            if (prevItem === 0) prevItem = item.width
+            if (item.width > prevItem) {
+                url = item.url
+            } else prevItem = item.width
+            console.log(prevItem, item.width)
+
+            return url
+        })
+    }
     
     const swiperRef = useRef(null);
 
