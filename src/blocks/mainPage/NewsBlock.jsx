@@ -30,6 +30,7 @@ export default function NewsBlock() {
                             link={`https://vk.com/tspk63?w=wall${item.owner_id}_${item.id}`}
                             img={item.attachments[0].photo.sizes[4].url}
                         /> 
+                        {console.log(item)}
                     </swiper-slide>
                 ))
                 setNews(newsItems)
