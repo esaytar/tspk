@@ -24,7 +24,7 @@ export default function BPOOMenu({ulID, index, main, liW}) {
         <ul className={`${ulID === index ? 'flex' : 'hidden'} flex-col  ${main}`}>
             {
                 items.map((item, index) => (
-                    <li className={`${item.classes && liW ? liW : ''} `} key={index}><a href="" className='!text-white/60 lg:text-current hover:text-white'>{item.value}</a></li>
+                    <li className={`${item.classes && liW ? liW : ''} `} key={index}><a href="" className='text-white/60 lg:text-current hover:text-white'>{item.value}</a></li>
                 ))
             }
         </ul>

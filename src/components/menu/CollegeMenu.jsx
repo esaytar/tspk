@@ -83,7 +83,7 @@ export default function CollegeMenu({ulID, index, main, gap}) {
                             {
                                 item.map((i, index) => (
                                     <li key={index}>
-                                        {i.isLink ? <a href="" className='!text-white/60 hover:text-white'>{i.value}</a> : <p>{i.value}</p>}
+                                        {i.isLink ? <a href="" className='text-white/60 hover:text-white'>{i.value}</a> : <p>{i.value}</p>}
                                     </li>
                                 ))
                             }

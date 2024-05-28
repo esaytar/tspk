@@ -73,7 +73,7 @@ export default function Header({menuRef}) {
         <div ref={menuRef} className='flex w-full justify-center'>
             <header style={transparent ? {} : {backgroundColor: "transparent"}} 
             className={`${isScrolled || location.pathname !== '/' ? 'light' : 'dark'} px-[1.88rem] py-[1.25rem] duration-[.2s] w-full flex justify-between items-center fixed z-20 
-                lg:max-w-[80rem] lg:rounded-[1.06rem] lg:px-10 lg:py-5 2xl:max-w-[87.5rem]`}>
+                lg:max-w-[80rem] lg:rounded-[1.06rem] lg:px-10 lg:py-5 2xl:max-w-[73%]`}>
                 <LogoTSPK/>
                 <ul className='text-white gap-5 lg:gap-10 items-center hidden lg:flex '>
                     {

@@ -74,7 +74,7 @@ export default function DataCollegeMenu({main, liW, ulID, index}) {
         <ul className={`${ulID === index ? 'flex' : 'hidden'} flex-col ${main}`}>
             {
                 items.map((item, index) => (
-                    <li className={`${item.classes && liW ? liW : ''} `} key={index}><Link to={item.link} className='!text-white/60 hover:text-white'>{item.value}</Link></li>
+                    <li className={`${item.classes && liW ? liW : ''} `} key={index}><Link to={item.link} className='text-white/60 hover:text-white'>{item.value}</Link></li>
                 ))
             }
         </ul>
