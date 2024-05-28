@@ -5,6 +5,7 @@ import CollegeMenu from './menu/CollegeMenu.jsx'
 import BPOOMenu from './menu/BPOOMenu.jsx'
 import DataCollegeMenu from './menu/DataCollegeMenu.jsx'
 import { Link } from "react-router-dom"
+import LogoTSPK from '../assets/icons/components/LogoTSPK.jsx'
 
 export default function Footer() {
     return (
@@ -12,8 +13,7 @@ export default function Footer() {
             <div className="flex flex-col 2xl:w-[73%] w-full gap-[1.42rem] lg:gap-10 items-center justify-center">
                 <div className="flex gap-[1.43rem] lg:gap-[8.19rem] w-full md:items-start flex-col md:flex-row">
                     <div className="flex gap-5 items-center order-1 md:order-none justify-center">
-                        <VK/>
-                        <Telegram/> 
+                        <LogoTSPK styles='fill-white/80'/>
                     </div>
                     <div className="flex w-full justify-between flex-col md:flex-row gap-[1.42rem] md:gap-0">
                         <nav className="flex flex-col gap-[0.71rem] md:gap-5 text-white">
@@ -29,6 +29,11 @@ export default function Footer() {
                             <BPOOMenu main='text-[0.75rem] gap-2.5' liW='w-[16rem]'/>
                             <p className='text-[1.14rem] lg:text-[1rem]'><a href="">Демонстрационный экзамен</a></p>
                             <p className='text-[1.14rem] lg:text-[1rem]'><Link to='/contacts'>Контакты</Link></p>
+                            <div className='flex gap-5 items-center'>
+                                <VK/>
+                                <Telegram/> 
+                            </div>
+                            
                         </nav>
                     </div>
                 </div>

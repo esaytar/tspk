@@ -8,7 +8,6 @@ export default function NewsCard({text, date, link, img}) {
             <div className="flex flex-col gap-5 items-start">
                 <div className="flex flex-col gap-2.5 max-w-full">
                     <p className='text-mainBlue'>{date}</p>
-                    <p className='text-grayMainText lg:text-18 text-[1.14rem]'>Открытие студенческого клуба РСМ</p>
                     <p className='slider-item__text text-grayMainText leading-[120%]'>{text}</p>
                 </div>
             </div>
