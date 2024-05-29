@@ -40,23 +40,16 @@ export default function Header({menuRef}) {
                 }
             }
             window.addEventListener('scroll', handleScroll)
-            return () => {
-                window.removeEventListener('scroll', handleScroll)
-            }
+            return () => window.removeEventListener('scroll', handleScroll)
         }
     }, [])
 
     useEffect(() => {
         function handleClickOutside(event) {
-            if (menuRef.current && !menuRef.current.contains(event.target)) {
-                setIsOpened(false)
-            }
+            if (menuRef.current && !menuRef.current.contains(event.target)) setIsOpened(false)
         }
-    
-        document.addEventListener('click', handleClickOutside);
-        return () => { 
-            document.removeEventListener('click', handleClickOutside);
-        };
+        document.addEventListener('click', handleClickOutside)
+        return () => document.removeEventListener('click', handleClickOutside)
     }, []);
 
     const openDropDownMenu = (e) => {
@@ -102,7 +95,6 @@ export default function Header({menuRef}) {
                 linkValue={linkArray}
                 >
             </DropDownMenu>
-
         </div>
     )
 }
