@@ -30,8 +30,8 @@ export default function Footer() {
                             <p className='text-[1.14rem] lg:text-[1rem]'><a href="">Демонстрационный экзамен</a></p>
                             <p className='text-[1.14rem] lg:text-[1rem]'><Link to='/contacts'>Контакты</Link></p>
                             <div className='flex gap-5 items-center self-center'>
-                                <VK styles='w-[32px]'/>
-                                <Telegram styles='w-[32px]'/> 
+                                <VK styles='w-[32px] h-[32px]'/>
+                                <Telegram styles='w-[32px] h-[32px]'/> 
                             </div>
                         </nav>
                     </div>
