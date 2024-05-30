@@ -18,11 +18,11 @@ export default function ContactsBlock() {
                             </p>
                             <p className='text-grayMainText flex gap-[0.31rem]'>
                                 <img src={phone} alt="номер телефона" />
-                                <a href="tel:24-10-25">24-10-25</a> (вахта)
+                                <a href="tel:241025">24-10-25</a> (вахта)
                             </p>
                             <p className='text-grayMainText flex gap-[0.31rem]'>
                                 <img src={phone} alt="номер телефона" />
-                                <a href="tel:24-10-54">24-10-54</a> (приемная)
+                                <a href="tel:241054">24-10-54</a> (приемная)
                             </p>
                         </div>
                     </div>
@@ -35,7 +35,7 @@ export default function ContactsBlock() {
                             </p>
                             <p className='text-grayMainText flex gap-[0.31rem]'>
                                 <img src={phone} alt="номер телефона" />
-                                <a href="tel:28-36-44">28-36-44</a>
+                                <a href="tel:283644">28-36-44</a>
                             </p>
                         </div>
                     </div>

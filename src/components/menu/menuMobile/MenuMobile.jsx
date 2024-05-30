@@ -34,7 +34,7 @@ export default function MenuMobile({status}) {
     ]
 
     return (
-        <div className={`${status}menuMobile absolute -translate-x-1/2 left-1/2 w-screen max-h-screen h-screen flex flex-col justify-between bg-mainGray px-[1.88rem] pt-[6.75rem] pb-[1rem] z-[5]`}>
+        <div className={`${status}menuMobile absolute -translate-x-1/2 left-1/2 w-screen max-h-screen h-dvh flex flex-col justify-between bg-mainGray px-[1.88rem] pt-[6.75rem] pb-[1rem] z-[5]`}>
             <nav>
                 <ul className='flex flex-col'>
                     {
@@ -49,8 +49,8 @@ export default function MenuMobile({status}) {
                             />
                         ))
                     }
-                    <li className='text-[1.14rem] pb-[1.43rem]'><span></span><Link to="">Демонcтрационный экзамен</Link></li>
-                    <li className='text-[1.14rem] pb-[1.43rem]'><span></span><Link to="/contacts">Контакты</Link></li>
+                    <li className='text-[1.14rem] pb-[1.43rem]'><span></span><Link className="!text-white" to="">Демонcтрационный экзамен</Link></li>
+                    <li className='text-[1.14rem] pb-[1.43rem]'><span></span><Link className="!text-white" to="/contacts">Контакты</Link></li>
                 </ul>
             </nav>
             <div className='flex w-full justify-between mt-6'>

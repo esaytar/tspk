@@ -15,6 +15,8 @@ header:has(.menuMobile.active) span ~ a,
 header:has(.menuMobile.active) li,
 header:has(.menuMobile.active) a > svg { color: #fff; fill: #fff; }
 
+header:has(.menuMobile.active) li > a {color: rgb(255 255 255 / 0.6);}
+
 header:has(.menuMobile.active)::before {
     background: #141414 !important; 
     content: ''; 
