@@ -15,7 +15,8 @@ export default function ContactsPage() {
       <Helmet>
         <title>Контакты | Тольяттинский социально-педагогический колледж</title>
       </Helmet>
-      <div className='flex flex-col xl:w-[73%] gap-[1.43rem] md:gap-[3.75rem] px-[1.42rem] lg:p-0 w-full mt-[5.5rem]'>
+      <div className='flex flex-col gap-[1.43rem] px-[2.14rem] w-full mt-[5.5rem] 
+        lg:max-w-[80rem] xl:p-0 md:gap-[3.75rem] 2xl:max-w-[73%] 2xl:min-w-[84.5rem]'>
         <AllContactsBlock/>
         <div className='flex rounded-[1.88rem] flex-col lg:flex-row shadow-newShad items-center w-full lg:gap-[3.75rem] overflow-hidden'>
           <QuestionForm/>

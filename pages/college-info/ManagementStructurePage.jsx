@@ -8,7 +8,8 @@ export default function ManagementStructurePage() {
     const listRef = useRef()
 
     return (
-        <div className='flex flex-col xl:w-[73%] gap-[1.43rem] md:gap-[3.75rem] px-[2.14rem] lg:p-0 w-full mt-[5.5rem]'>
+        <div className='flex flex-col gap-[1.43rem] px-[2.14rem] w-full mt-[5.5rem] 
+        lg:max-w-[80rem] xl:p-0 md:gap-[3.75rem] 2xl:max-w-[73%] 2xl:min-w-[84.5rem]'>
             <Helmet>
                 <title>Сведения об образовательной организации | Тольяттинский социально-педагогический колледж</title>
             </Helmet>
