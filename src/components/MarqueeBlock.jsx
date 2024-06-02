@@ -49,7 +49,7 @@ export default function MarqueeBlock() {
     ]
 
     return (
-        <div className='overflow-hidden whitespace-nowrap m-auto'>
+        <div className='cont-scroll overflow-hidden whitespace-nowrap m-auto'>
             <div className='scroll inline-block w-max'>
                 {
                     images.map((image, index) => (

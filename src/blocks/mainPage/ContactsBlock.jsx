@@ -10,7 +10,7 @@ export default function ContactsBlock() {
             <div className='flex w-full justify-between lg:items-center flex-col lg:flex-row gap-[1.4rem] lg:gap-0'>
                 <div className="flex flex-col gap-5">
                     <div className='flex flex-col gap-4'>
-                        <p className='text-mainBlue lg:text-18 text-[1.15rem]'>Главный корпус</p>
+                        <p className='text-mainBlue lg:text-[1.25rem] text-[1.15rem]'>Главный корпус</p>
                         <div className="flex flex-col lg:gap-2.5 gap-[0.34rem]">
                             <p className='text-grayMainText flex gap-[0.31rem]'>
                                 <img src={marker} alt="местоположение" />
@@ -27,7 +27,7 @@ export default function ContactsBlock() {
                         </div>
                     </div>
                     <div className='flex flex-col gap-4'>
-                        <p className='text-mainBlue lg:text-18 text-[1.15rem]'>Второй корпус</p>
+                        <p className='text-mainBlue lg:text-[1.25rem] text-[1.15rem]'>Второй корпус</p>
                         <div className="flex flex-col lg:gap-2.5 gap-[0.34rem]">
                             <p className='text-grayMainText flex gap-[0.31rem]'>
                                 <img src={marker} alt="местоположение" />
