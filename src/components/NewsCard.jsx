@@ -1,5 +1,4 @@
 import React from 'react'
-import newsImg from '../assets/news-img.jpg'
 
 export default function NewsCard({text, date, link, img}) {
     return (
