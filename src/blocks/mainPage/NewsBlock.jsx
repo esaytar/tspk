@@ -28,7 +28,8 @@ export default function NewsBlock() {
                             text={item.text}
                             date={convertToNormalDate(item.date)}
                             link={`https://vk.com/tspk63?w=wall${item.owner_id}_${item.id}`}
-                            img={findMaxSizes(item.attachments[0].photo.sizes)}
+                            img={findMaxSizes(item.attachments[0].type === 'photo' ? 
+                                item.attachments[0].photo.sizes : item.attachments[0].video.image)}
                         /> 
                     </swiper-slide>
                 ))
