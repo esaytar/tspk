@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from "react-router-dom"
 import { useState, useRef, useEffect } from 'react';
 import ArrowBottom from '../assets/icons/components/ArrowBottom';
+import DataCollegeMenu from '../components/menu/DataCollegeMenu'
 
 export default function HeadingInfoPage({listRef, titleList}) {
     const [isOpened, setIsOpened] = useState(false)
@@ -25,21 +25,8 @@ export default function HeadingInfoPage({listRef, titleList}) {
                     <p className='text-mainBlue '>{titleList}</p>
                     <ArrowBottom style='stroke-mainBlue w-[23px] h-[12px]'/> 
                 </div>
-                <ul className={`${isOpened ? 'flex' : 'hidden'} absolute flex-col lg:px-10 lg:py-5 p-[1.43rem] bg-white text-mainBlue gap-5 rounded-[1.43rem] lg:rounded-[2.5rem] z-[15] mt-2.5 shadow-newShad`}>
-                    <li><Link to="/basic-data">Основные сведения</Link></li>
-                    <li><Link to="/structure-college">Структура и органы управления образовательной организацией</Link></li>
-                    <li><a href="">Документы</a></li>
-                    <li><a href="">Образование</a></li>
-                    <li><a href="">Образовательные стандарты и требования</a></li>
-                    <li><a href="">Руководство. Педагогический (научно-педагогический) состав</a></li>
-                    <li><a href="">Материально-техническое обеспечение и оснащенность образовательного процесса</a></li>
-                    <li><a href="">Стипендии и иные виды материальной поддержки</a></li>
-                    <li><a href="">Платные образовательные услуги</a></li>
-                    <li><a href="">Финансово-хозяйственная деятельность</a></li>
-                    <li><a href="">Вакантные места для приема (перевода) обучающихся</a></li>
-                    <li><a href="">Доступная среда</a></li>
-                    <li><a href="">Международное сотрудничество</a></li>
-                </ul>
+                <DataCollegeMenu color="text-mainBlue" main={`${isOpened ? 'flex' : 'hidden'} absolute flex-col  p-[1.43rem] bg-white gap-5 rounded-[1.43rem]
+                    lg:px-10 lg:py-5 lg:rounded-[2.5rem] z-[15] mt-2.5 shadow-newShad`}/>
             </div>
         </div>
     )

@@ -160,3 +160,140 @@ export const structureInfo = [
         content: <a className='flex items-center underline gap-1' href="https://tspk.org/images/Local_act/Polozenie_o_pedagogicheskom_sovete.pdf"> <img src={docPDF} alt="PDF-файл" /> Положение о педагогическом совете образовательной организации</a>
     },
 ]
+
+export const documentsInfo = [
+    {
+        title: 'Устав образовательной организации',
+        content: <p className='flex items-center gap-1'> 
+                    <img src={docPDF} alt="" /> 
+                    <a className='underline' href="https://tspk.org/images/oficial_dokument_2016/struktura.pdf">Просмотр</a> 
+                    | Изменения: 
+                    <a className='underline' href="https://tspk.org/images/oficial_dokument_2019/Ystav_GAPOY_TSPK_2019_edit.pdf">05.02.2019</a> |
+                    <a className='underline' href="https://tspk.org/images/SvediniaObOrg/2023/Ystav_GAPOY_TSPK_2023_edit.pdf">22.06.2023</a> |
+                    <a className='underline' href="https://tspk.org/images/SvediniaObOrg/2023/Ystav_GAPOY_TSPK_2023_edit_2.pdf">04.10.2023</a>
+                </p>
+    }, 
+    {
+        title: 'Лицензия на осуществление образовательной деятельности (с приложениями)',
+        content: <a className='flex items-center underline gap-1' href="https://tspk.org/images/oficial_dokument_2022/LicenziaTSPK.pdf"> <img src={docPDF} alt="PDF-файл" /> Просмотр</a>
+    },
+    {
+        title: 'Свидетельство о государственной аккредитации (с приложениями) при наличии',
+        content: <a className='flex items-center underline gap-1' href="https://tspk.org/images/oficial_dokument_2015/Svidetelstvo_akreditaciya_2015.pdf"> <img src={docPDF} alt="PDF-файл" /> Просмотр</a>
+    },
+    {
+        title: 'Правила внутреннего распорядка обучающихся',
+        content: <p className='flex items-center gap-1'> 
+                    <img src={docPDF} alt="PDF-файл" /> 
+                    <a className='underline' href="https://tspk.org/images/SvediniaObOrg/2021/el_podpiska/EP_Pravila_vnutrennego_rasporyadka_studentov.pdf">Электронная подпись</a> | 
+                    <a className='underline' href="https://tspk.org/images/SvediniaObOrg/Pravila_vnutrennego_rasporyadka_studentov_dopolnenia.pdf">Изменения</a>
+                </p>
+    }, 
+    {
+        title: 'Положение о режиме занятий обучающихся',
+        content: [
+            <a className='flex items-center underline gap-1' href="https://tspk.org/images/SvediniaObOrg/2021/Polozenie_o_rezime_zanyatiy_obuch.pdf"><img src={docPDF} alt="PDF-файл" /> Просмотр</a>,
+            <a className='flex items-center underline gap-1' href="https://tspk.org/images/SvediniaObOrg/2017/Pravila_vnutrennego_trudovogo_rasporiadka_izmenenia2017.pdf"><img src={docPDF} alt="PDF-файл" />Изменения и дополнения (30.03.2017)</a>,
+            <a className='flex items-center underline gap-1' href="https://tspk.org/images/SvediniaObOrg/2017/Pravila_vnutrennego_trudovogo_rasporiadka_izmenenia2.pdf"><img src={docPDF} alt="PDF-файл" /> Изменения и дополнения (28.05.2018)</a>,
+            <a className='flex items-center underline gap-1' href="https://tspk.org/images/SvediniaObOrg/2019/Pravila_vnutrennego_trudovogo_rasporiadka_izmenenia_2019.pdf"><img src={docPDF} alt="PDF-файл" />Изменения и дополнения (05.06.2019)</a>,
+        ]
+    }, 
+    {
+        title: 'Коллективный договор',
+        content: <a className='flex items-center underline gap-1' href="https://tspk.org/images/SvediniaObOrg/2023/Kol_dofovor_2023-26.pdf"> <img src={docPDF} alt="PDF-файл" />Коллективный договор 2023-2026</a>
+    },
+    {
+        title: 'Отчет о результатах самообследования',
+        content: <a className='flex items-center underline gap-1' href="https://tspk.org/images/Samoobsledovanie/Otchet_o_rezultatax_samoobsledovania_2023.pdf"> <img src={docPDF} alt="PDF-файл" />Отчет о результатах самообследования на 2023г.</a>
+    },
+    {
+        title: 'Локальные нормативные акты:',
+        content: [
+            [
+                <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5">Программа модернизации ГАПОУ ТСПК</p>,
+                <p className="px-2.5 flex flex-col gap-2.5">
+                    <span className='flex items-center gap-1'> 
+                        <img src={docPDF} alt="PDF-файл" /> 
+                        <a className='underline' href="https://tspk.org/images/Programma_modern_2018_TSPK2.pdf">Просмотр</a> + 
+                        <a className='underline' href="https://tspk.org/images/Programma_modern_2018_TSPK2_dop.pdf">Дополнения к программе</a>
+                    </span>
+                </p> 
+            ], 
+            [
+                <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5">Правила приема обучающихся в ГАПОУ ТСПК</p>,
+                <p className="px-2.5 flex flex-col gap-2.5">
+                    <span className='flex items-center gap-1'> 
+                        <img src={docPDF} alt="PDF-файл" /> 
+                        <a className='underline' href="https://tspk.org/images/abitureint/2023/Pravila_priema.pdf">Электронная подпись</a>
+                    </span>
+                </p> 
+            ], 
+            [
+                <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5">Формы, периодичности и порядок текущего контроля успеваемости и промежуточной аттестации обучающихся</p>,
+                <p className="px-2.5 flex flex-col gap-2.5">
+                    <span className='flex items-center gap-1'> 
+                        <img src={docPDF} alt="PDF-файл" /> 
+                        <a className='underline' href="https://tspk.org/images/SvediniaObOrg/2021/el_podpiska/Polozenie_ob_org_tekuz_kontrol_el.pdf">Электронная подпись</a>
+                    </span>
+                </p> 
+            ], 
+            [
+                <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5">Порядок и основания перевода, отчисления и восстановления обучающихся</p>,
+                <p className="px-2.5 flex flex-col gap-2.5">
+                    <span className='flex items-center gap-1'> 
+                        <img src={docPDF} alt="PDF-файл" /> 
+                        <a className='underline' href="https://tspk.org/images/SvediniaObOrg/2021/el_podpiska/EP_Poryadok%20i%20osnovaniya%20perevoda%20otchisleniya%20i%20vosstanovleniya%20obuchayushchihsya.pdf">Электронная подпись</a>
+                    </span>
+                </p> 
+            ], 
+            [
+                <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5">Порядок оформления, возникновения, прекращения отношений между ГАПОУ ТСПК и обучающимися и (или) родителями (законными представителями) несовершеннолетних обучающихся</p>,
+                <p className="px-2.5 flex flex-col gap-2.5">
+                    <span className='flex items-center gap-1'> 
+                        <img src={docPDF} alt="PDF-файл" /> 
+                        <a className='underline' href="https://tspk.org/images/SvediniaObOrg/2021/el_podpiska/EP_Poriadok_oformlenia_vozniknovenia_otnoshenii_obuchausimisia.pdf">Электронная подпись</a>
+                    </span>
+                </p> 
+            ], 
+            [
+                <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5">Правила внутреннего распорядка обучающихся</p>,
+                <p className="px-2.5 flex flex-col gap-2.5">
+                    <span className='flex items-center gap-1'> 
+                        <img src={docPDF} alt="PDF-файл" /> 
+                        <a className='underline' href="https://tspk.org/images/SvediniaObOrg/Pravila_vnutrennego_rasporyadka_studentov.pdf">Просмотр</a>
+                    </span>
+                </p> 
+            ], 
+            [
+                <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5">Правила внутреннего трудового распорядка</p>,
+                <p className="px-2.5 flex flex-col gap-4">
+                    <span className='flex items-center gap-1'> 
+                        <img src={docPDF} alt="PDF-файл" /> 
+                        <a className='underline' href="https://tspk.org/images/SvediniaObOrg/2017/Pravila_vnutrennego_trudovogo_rasporiadka_ep.pdf">Электронная подпись</a>
+                    </span>
+                    <span className='flex items-center gap-1'> 
+                        <img src={docPDF} alt="PDF-файл" /> 
+                        <a className='underline' href="https://tspk.org/images/SvediniaObOrg/2017/Pravila_vnutrennego_trudovogo_rasporiadka_izmenenia2017_ep.pdf">Электронная подпись (изменения) (30.03.17)</a>
+                    </span>
+                    <span className='flex items-center gap-1'> 
+                        <img src={docPDF} alt="PDF-файл" /> 
+                        <a className='underline' href="https://tspk.org/images/SvediniaObOrg/2017/Pravila_vnutrennego_trudovogo_rasporiadka_izmenenia2018_ep.pdf">Электронная подпись (изменения) (28.05.18)</a>
+                    </span>
+                    <span className='flex items-center gap-1'> 
+                        <img src={docPDF} alt="PDF-файл" /> 
+                        <a className='underline' href="https://tspk.org/images/Local_act/Pravila_vnutrennego_trudovogo_rasporiadka_izmenenia_2020_ep.pdf">Электронная подпись (изменения) (10.11.20)</a>
+                    </span>
+                    <span className='flex items-center gap-1'> 
+                        <img src={docPDF} alt="PDF-файл" /> 
+                        <a className='underline' href="https://tspk.org/images/Local_act/Pravila_vnutrennego_trudovogo_rasporiadka_izmenenia_2021.pdf">Изменения и дополнения (27.08.2021)</a>
+                    </span>
+                    <span className='flex items-center gap-1'> 
+                        <img src={docPDF} alt="PDF-файл" /> 
+                        <a className='underline' href="https://tspk.org/images/Local_act/Pravila_vnutrennego_trudovogo_rasporiadka_izmenenia_2023.pdf">Изменения и дополнения (27.08.2023)</a>
+                    </span>
+                    
+                </p> 
+            ], 
+        ]
+    }
+]
