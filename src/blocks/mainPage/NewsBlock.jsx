@@ -6,6 +6,11 @@ register();
 
 export default function NewsBlock() {
     const [news, setNews] = useState(null)
+    const [type, setType] = useState()
+
+    // function setTypeAttachment() {
+    //     if ()
+    // }
 
     useEffect(() => {
         async function fetchData() {
@@ -29,8 +34,18 @@ export default function NewsBlock() {
                             text={item.text}
                             date={convertToNormalDate(item.date)}
                             link={`https://vk.com/tspk63?w=wall${item.owner_id}_${item.id}`}
-                            img={findMaxSizes(item.attachments[0].type === 'photo' ? 
-                                item.attachments[0].photo.sizes : item.attachments[0].video.image)}
+                            img={() => {
+                                switch(item.attachments[0].type) {
+                                    case 'photo':
+                                        findMaxSizes(item.attachments[0].photo.sizes)
+                                        break
+                                    case 'video':
+                                        findMaxSizes(item.attachments[0].video.image)
+                                        break
+                                    case 'doc':
+                                        return item.attachments[0].doc.url
+                                }
+                            }}
                         /> 
                     </swiper-slide>
                 ))
