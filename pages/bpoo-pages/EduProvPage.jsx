@@ -1,16 +1,16 @@
 import React, {useEffect} from 'react'
-import {docsInfo} from '../../../src/data/bpooInfo'
+import {eduProvInfo} from '../../../src/data/bpooInfo'
 import InfoString from '../../../src/components/InfoString'
 
-export default function DocsPage({func}) {
+export default function EduProvPage({func}) {
     useEffect(() => {
-        func('Документы')
+        func('Учебно-методическое обеспечение инклюзивного образования')
     }, [])
 
     return (
         <div className='text-18 flex flex-col gap-[1.88rem]'>
             {
-                docsInfo.map((item, index) => (
+                eduProvInfo.map((item, index) => (
                     <InfoString 
                         title={item.title}
                         key={index}

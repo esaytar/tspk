@@ -20,7 +20,12 @@ export default function MainInfoPage() {
             <Helmet>
                 <title>Сведения об образовательной организации | Тольяттинский социально-педагогический колледж</title>
             </Helmet>
-            <HeadingInfoPage listRef={listRef} titleList={titleList} titlePage='Сведения об образовательной организации'/>
+            <HeadingInfoPage 
+                listRef={listRef} 
+                titleList={titleList} 
+                titlePage='Сведения об образовательной организации'
+                type='main'
+            />
 
             <Routes>
                 <Route path='basic-data' element={<BasicDataPage func={changeTitleList}/>}></Route>
