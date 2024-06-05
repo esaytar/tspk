@@ -1,5 +1,8 @@
 import doc from '../assets/icons/doc_icon.svg'
 import docPDF from '../assets/icons/doc_pdf.svg'
+import LinkDataMode from './components/LinkDataMode'
+import MoreLinksMode from './components/MoreLinksMode'
+import UsualDataMode from './components/UsualDataMode'
 
 export const basicInfo = [
     {
@@ -72,50 +75,44 @@ export const basicInfo = [
         title: 'Информация о местах осуществления образовательной деятельности, включая места, не указываемые в соответствии с Федеральным законом «Об образовании в Российской Федерации» в приложении к лицензии на осуществление образовательной деятельности',
         content: [ 
             [
-                <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5">Место осуществления образовательной деятельности</p>,
-                <p className="px-2.5 flex flex-col gap-2.5">
+                <UsualDataMode title='Место осуществления образовательной деятельности'>
                     <span>Здание ГАПОУ ТСПК, расположенное по адресу:</span>  
                     <span>Российская Федерация, 445012, Самарская область, г. Тольятти, ул. Мурысева, 84 (учебный корпус № 1).</span> 
                     <span>Российская Федерация, 445010, Самарская область, г. Тольятти, ул. Ленинградская, 28 (учебный корпус № 2)</span>
-                </p>
+                </UsualDataMode>
             ],
             [
-                <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5 mt-2">Места осуществления образовательной деятельности по дополнительным профессиональным программам</p>,
-                <p className="px-2.5 flex flex-col gap-2.5">
+                <UsualDataMode title='Места осуществления образовательной деятельности по дополнительным профессиональным программам'>
                     <span>Здание ГАПОУ ТСПК, расположенное по адресу:</span>  
                     <span>Российская Федерация, 445012, Самарская область, г. Тольятти, ул. Мурысева, 84 (учебный корпус № 1).</span> 
                     <span>Российская Федерация, 445010, Самарская область, г. Тольятти, ул. Ленинградская, 28 (учебный корпус № 2)</span>
-                </p>
+                </UsualDataMode>
             ],
             [
-                <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5 mt-2">Места осуществления образовательной деятельности по основным программам профессионального обучения</p>,
-                <p className="px-2.5 flex flex-col gap-2.5">
+                <UsualDataMode title='Места осуществления образовательной деятельности по основным программам профессионального обучения'>
                     <span>Здание ГАПОУ ТСПК, расположенное по адресу:</span>  
                     <span>Российская Федерация, 445012, Самарская область, г. Тольятти, ул. Мурысева, 84 (учебный корпус № 1).</span> 
                     <span>Российская Федерация, 445010, Самарская область, г. Тольятти, ул. Ленинградская, 28 (учебный корпус № 2)</span>
-                </p>
+                </UsualDataMode>
             ],
             [
-                <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5 mt-2">Места осуществления образовательной деятельности при использовании сетевой формы реализации образовательных программ</p>,
-                <p className="px-2.5 flex flex-col gap-2.5">
+                <UsualDataMode title='Места осуществления образовательной деятельности при использовании сетевой формы реализации образовательных программ'>
                     <a href='https://tspk.org/images/Local_act/Polozenie_o_setevoy_forme.pdf' className='flex gap-1 items-center underline'><img src={doc} alt="документ" />Положение сетевой форме реализации образовательных программ в ГАПОУ ТСПК</a>  
                     <a href='https://tspk.org/images/veduziykollege/reglamnt_setevogo_vzaim.pdf' className='flex gap-1 items-center underline'><img src={doc} alt="документ" />Регламент сетевого взаимодействия ведущего колледжа с профильными профессиональными образовательными организациями</a>  
                     <a href='https://tspk.org/images/Local_act/Polozenie_o_setevoy_forme.pdf' className='flex gap-1 items-center underline'><img src={doc} alt="документ" />Положение о центре сетевого взаимодействия ГАПОУ ТСПК</a>  
-                </p>
+                </UsualDataMode>
             ],
             [
-                <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5 mt-2">Места проведения практики</p>,
-                <p className="px-2.5 flex flex-col gap-2.5">
+                <UsualDataMode title='Места проведения практики'>
                     <a href='' className='flex gap-1 items-center underline'><img src={doc} alt="документ" />Места проведения практики</a>  
-                </p>
+                </UsualDataMode>
             ],
             [
-                <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5 mt-2">Места проведения практической подготовки обучающихся</p>,
-                <p className="px-2.5 flex flex-col gap-2.5">
+                <UsualDataMode title='Места проведения практической подготовки обучающихся'>
                     <span>Здание ГАПОУ ТСПК, расположенное по адресу:</span>  
                     <span>Российская Федерация, 445012, Самарская область, г. Тольятти, ул. Мурысева, 84 (учебный корпус № 1).</span> 
                     <span>Российская Федерация, 445010, Самарская область, г. Тольятти, ул. Ленинградская, 28 (учебный корпус № 2)</span>
-                </p>
+                </UsualDataMode>
             ],
         ]
     }
@@ -164,109 +161,102 @@ export const structureInfo = [
 export const documentsInfo = [
     {
         title: 'Устав образовательной организации',
-        content: <p className='flex items-center gap-1'> 
+        content: <MoreLinksMode>
                     <img src={docPDF} alt="" /> 
                     <a className='underline' href="https://tspk.org/images/oficial_dokument_2016/struktura.pdf">Просмотр</a> 
                     | Изменения: 
                     <a className='underline' href="https://tspk.org/images/oficial_dokument_2019/Ystav_GAPOY_TSPK_2019_edit.pdf">05.02.2019</a> |
                     <a className='underline' href="https://tspk.org/images/SvediniaObOrg/2023/Ystav_GAPOY_TSPK_2023_edit.pdf">22.06.2023</a> |
                     <a className='underline' href="https://tspk.org/images/SvediniaObOrg/2023/Ystav_GAPOY_TSPK_2023_edit_2.pdf">04.10.2023</a>
-                </p>
+                </MoreLinksMode>
     }, 
     {
         title: 'Лицензия на осуществление образовательной деятельности (с приложениями)',
-        content: <a className='flex items-center underline gap-1' href="https://tspk.org/images/oficial_dokument_2022/LicenziaTSPK.pdf"> <img src={docPDF} alt="PDF-файл" /> Просмотр</a>
+        content: <LinkDataMode link='https://tspk.org/images/oficial_dokument_2022/LicenziaTSPK.pdf' text='Просмотр'/>
     },
     {
         title: 'Свидетельство о государственной аккредитации (с приложениями) при наличии',
-        content: <a className='flex items-center underline gap-1' href="https://tspk.org/images/oficial_dokument_2015/Svidetelstvo_akreditaciya_2015.pdf"> <img src={docPDF} alt="PDF-файл" /> Просмотр</a>
+        content: <LinkDataMode link='https://tspk.org/images/oficial_dokument_2015/Svidetelstvo_akreditaciya_2015.pdf' text='Просмотр'/>
     },
     {
         title: 'Правила внутреннего распорядка обучающихся',
-        content: <p className='flex items-center gap-1'> 
+        content: <MoreLinksMode>
                     <img src={docPDF} alt="PDF-файл" /> 
                     <a className='underline' href="https://tspk.org/images/SvediniaObOrg/2021/el_podpiska/EP_Pravila_vnutrennego_rasporyadka_studentov.pdf">Электронная подпись</a> | 
                     <a className='underline' href="https://tspk.org/images/SvediniaObOrg/Pravila_vnutrennego_rasporyadka_studentov_dopolnenia.pdf">Изменения</a>
-                </p>
+                </MoreLinksMode>
     }, 
     {
         title: 'Положение о режиме занятий обучающихся',
         content: [
-            <a className='flex items-center underline gap-1' href="https://tspk.org/images/SvediniaObOrg/2021/Polozenie_o_rezime_zanyatiy_obuch.pdf"><img src={docPDF} alt="PDF-файл" /> Просмотр</a>,
-            <a className='flex items-center underline gap-1' href="https://tspk.org/images/SvediniaObOrg/2017/Pravila_vnutrennego_trudovogo_rasporiadka_izmenenia2017.pdf"><img src={docPDF} alt="PDF-файл" />Изменения и дополнения (30.03.2017)</a>,
-            <a className='flex items-center underline gap-1' href="https://tspk.org/images/SvediniaObOrg/2017/Pravila_vnutrennego_trudovogo_rasporiadka_izmenenia2.pdf"><img src={docPDF} alt="PDF-файл" /> Изменения и дополнения (28.05.2018)</a>,
-            <a className='flex items-center underline gap-1' href="https://tspk.org/images/SvediniaObOrg/2019/Pravila_vnutrennego_trudovogo_rasporiadka_izmenenia_2019.pdf"><img src={docPDF} alt="PDF-файл" />Изменения и дополнения (05.06.2019)</a>,
+            <LinkDataMode link='https://tspk.org/images/SvediniaObOrg/2021/Polozenie_o_rezime_zanyatiy_obuch.pdf' text='Просмотр'/>,
+            <LinkDataMode link='https://tspk.org/images/SvediniaObOrg/2017/Pravila_vnutrennego_trudovogo_rasporiadka_izmenenia2017.pdf' text='Изменения и дополнения (30.03.2017)'/>,
+            <LinkDataMode link='https://tspk.org/images/SvediniaObOrg/2017/Pravila_vnutrennego_trudovogo_rasporiadka_izmenenia2.pdf' text='Изменения и дополнения (28.05.2018)'/>,
+            <LinkDataMode link='https://tspk.org/images/SvediniaObOrg/2019/Pravila_vnutrennego_trudovogo_rasporiadka_izmenenia_2019.pdf' text='Изменения и дополнения (05.06.2019)'/>
         ]
     }, 
     {
         title: 'Коллективный договор',
-        content: <a className='flex items-center underline gap-1' href="https://tspk.org/images/SvediniaObOrg/2023/Kol_dofovor_2023-26.pdf"> <img src={docPDF} alt="PDF-файл" />Коллективный договор 2023-2026</a>
+        content: <LinkDataMode link='https://tspk.org/images/SvediniaObOrg/2023/Kol_dofovor_2023-26.pdf' text='Коллективный договор 2023-2026'/>
     },
     {
         title: 'Отчет о результатах самообследования',
-        content: <a className='flex items-center underline gap-1' href="https://tspk.org/images/Samoobsledovanie/Otchet_o_rezultatax_samoobsledovania_2023.pdf"> <img src={docPDF} alt="PDF-файл" />Отчет о результатах самообследования на 2023г.</a>
+        content: <LinkDataMode link='https://tspk.org/images/Samoobsledovanie/Otchet_o_rezultatax_samoobsledovania_2023.pdf' text='Отчет о результатах самообследования на 2023г.'/>
     },
     {
         title: 'Локальные нормативные акты:',
         content: [
             [
-                <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5">Программа модернизации ГАПОУ ТСПК</p>,
-                <p className="px-2.5 flex flex-col gap-2.5">
+                <UsualDataMode title='Программа модернизации ГАПОУ ТСПК'>
                     <span className='flex items-center gap-1'> 
                         <img src={docPDF} alt="PDF-файл" /> 
                         <a className='underline' href="https://tspk.org/images/Programma_modern_2018_TSPK2.pdf">Просмотр</a> + 
                         <a className='underline' href="https://tspk.org/images/Programma_modern_2018_TSPK2_dop.pdf">Дополнения к программе</a>
                     </span>
-                </p> 
+                </UsualDataMode>
             ], 
             [
-                <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5">Правила приема обучающихся в ГАПОУ ТСПК</p>,
-                <p className="px-2.5 flex flex-col gap-2.5">
+                <UsualDataMode title='Правила приема обучающихся в ГАПОУ ТСПК'>
                     <span className='flex items-center gap-1'> 
                         <img src={docPDF} alt="PDF-файл" /> 
                         <a className='underline' href="https://tspk.org/images/abitureint/2023/Pravila_priema.pdf">Электронная подпись</a>
                     </span>
-                </p> 
+                </UsualDataMode>
             ], 
             [
-                <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5">Формы, периодичности и порядок текущего контроля успеваемости и промежуточной аттестации обучающихся</p>,
-                <p className="px-2.5 flex flex-col gap-2.5">
-                    <span className='flex items-center gap-1'> 
+                <UsualDataMode title='Формы, периодичности и порядок текущего контроля успеваемости и промежуточной аттестации обучающихся'>
+                     <span className='flex items-center gap-1'> 
                         <img src={docPDF} alt="PDF-файл" /> 
                         <a className='underline' href="https://tspk.org/images/SvediniaObOrg/2021/el_podpiska/Polozenie_ob_org_tekuz_kontrol_el.pdf">Электронная подпись</a>
                     </span>
-                </p> 
+                </UsualDataMode>
             ], 
             [
-                <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5">Порядок и основания перевода, отчисления и восстановления обучающихся</p>,
-                <p className="px-2.5 flex flex-col gap-2.5">
+                <UsualDataMode title='Порядок и основания перевода, отчисления и восстановления обучающихся'>
                     <span className='flex items-center gap-1'> 
                         <img src={docPDF} alt="PDF-файл" /> 
                         <a className='underline' href="https://tspk.org/images/SvediniaObOrg/2021/el_podpiska/EP_Poryadok%20i%20osnovaniya%20perevoda%20otchisleniya%20i%20vosstanovleniya%20obuchayushchihsya.pdf">Электронная подпись</a>
                     </span>
-                </p> 
+                </UsualDataMode>
             ], 
             [
-                <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5">Порядок оформления, возникновения, прекращения отношений между ГАПОУ ТСПК и обучающимися и (или) родителями (законными представителями) несовершеннолетних обучающихся</p>,
-                <p className="px-2.5 flex flex-col gap-2.5">
+                <UsualDataMode title='Порядок оформления, возникновения, прекращения отношений между ГАПОУ ТСПК и обучающимися и (или) родителями (законными представителями) несовершеннолетних обучающихся'>
                     <span className='flex items-center gap-1'> 
                         <img src={docPDF} alt="PDF-файл" /> 
                         <a className='underline' href="https://tspk.org/images/SvediniaObOrg/2021/el_podpiska/EP_Poriadok_oformlenia_vozniknovenia_otnoshenii_obuchausimisia.pdf">Электронная подпись</a>
                     </span>
-                </p> 
+                </UsualDataMode>
             ], 
             [
-                <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5">Правила внутреннего распорядка обучающихся</p>,
-                <p className="px-2.5 flex flex-col gap-2.5">
+                <UsualDataMode title='Правила внутреннего распорядка обучающихся'>
                     <span className='flex items-center gap-1'> 
                         <img src={docPDF} alt="PDF-файл" /> 
                         <a className='underline' href="https://tspk.org/images/SvediniaObOrg/Pravila_vnutrennego_rasporyadka_studentov.pdf">Просмотр</a>
                     </span>
-                </p> 
+                </UsualDataMode>
             ], 
             [
-                <p className="bg-mainBlue/5 text-mainBlue rounded-[0.31rem] py-[0.31rem] px-2.5">Правила внутреннего трудового распорядка</p>,
-                <p className="px-2.5 flex flex-col gap-4">
+                <UsualDataMode title='Правила внутреннего трудового распорядка'>
                     <span className='flex items-center gap-1'> 
                         <img src={docPDF} alt="PDF-файл" /> 
                         <a className='underline' href="https://tspk.org/images/SvediniaObOrg/2017/Pravila_vnutrennego_trudovogo_rasporiadka_ep.pdf">Электронная подпись</a>
@@ -291,8 +281,7 @@ export const documentsInfo = [
                         <img src={docPDF} alt="PDF-файл" /> 
                         <a className='underline' href="https://tspk.org/images/Local_act/Pravila_vnutrennego_trudovogo_rasporiadka_izmenenia_2023.pdf">Изменения и дополнения (27.08.2023)</a>
                     </span>
-                    
-                </p> 
+                </UsualDataMode>
             ], 
         ]
     }

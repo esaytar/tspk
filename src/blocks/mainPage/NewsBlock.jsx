@@ -17,6 +17,7 @@ export default function NewsBlock() {
                     }
                 });
                 if (!response.ok) {
+                    
                     throw new Error(`Network response was not ok: ${response.statusText}`);
                 }
                 let data = await response.json()
@@ -35,6 +36,9 @@ export default function NewsBlock() {
                 ))
                 setNews(newsItems)
             } catch (error) {
+                setNews(
+                    <p className='text-[1.5rem] text-center text-grayMainText w-full'>Новости на данный момент недоступны</p>
+                )
                 console.error('There was a problem with your fetch operation:', error);
             }
         }
