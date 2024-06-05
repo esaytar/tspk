@@ -23,8 +23,8 @@ export default function MainBPOOPage() {
             <Helmet>
                 <title>Базовая профессиональная образовательная организация | Тольяттинский социально-педагогический колледж</title>
             </Helmet>
-            <div className='w-full h-[442px] lg:rounded-[1.25rem] rounded-[0.71rem]'>
-                <img src={mainImg} alt="" />
+            <div className='w-full lg:rounded-[1.25rem] rounded-[0.71rem]'>
+                <img src={mainImg} className='w-full' alt="БПОО ТСПК" />
             </div>
             <div className='w-full px-[2.14rem] py-[1.43rem] rounded-[0.71rem] shadow-newShad 
                 lg:rounded-[2.5rem] lg:px-10 lg:py-5'>
