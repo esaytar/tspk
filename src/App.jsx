@@ -5,11 +5,9 @@ import Header from './components/Header/Header'
 import ContactsPage from '../public/pages/ContactsPage'
 import Footer from './components/Footer'
 import MarqueeBlock from './components/MarqueeBlock'
-import BasicDataPage from '../public/pages/college-info/BasicDataPage'
-import ManagementStructurePage from '../public/pages/college-info/ManagementStructurePage'
-import DocumentsPage from '../public/pages/college-info/DocumentsPage'
 import DocsPage from '../public/pages/bpoo-pages/DocsPage'
 import MainInfoPage from '../public/pages/college-info/MainInfoPage'
+import MainBPOOPage from '../public/pages/bpoo-pages/MainBPOOPage'
 
 function App() {
     const menuRef = useRef(null);
@@ -28,7 +26,7 @@ function App() {
                 <Route path='/' element={<MainPage/>}></Route>
                 <Route path='/contacts' element={<ContactsPage/>}></Route>
                 <Route path='/infos/*' element={<MainInfoPage/>}></Route>
-                <Route path='/bpoo-docs' element={<DocsPage/>}></Route>
+                <Route path='/bpoo/*' element={<MainBPOOPage/>}></Route>
             </Routes> 
             <MarqueeBlock/>
             <Footer/>

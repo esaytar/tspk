@@ -1,16 +1,16 @@
 import React, {useEffect} from 'react'
-import {docsInfo} from '../../../src/data/bpooInfo'
+import {linksInfo} from '../../../src/data/bpooInfo'
 import InfoString from '../../../src/components/InfoString'
 
-export default function DocsPage({func}) {
+export default function UsefulLinksPage({func}) {
     useEffect(() => {
-        func('Документы')
+        func('Полезные ссылки')
     }, [])
 
     return (
         <div className='text-18 flex flex-col gap-[1.88rem]'>
             {
-                docsInfo.map((item, index) => (
+                linksInfo.map((item, index) => (
                     <InfoString 
                         title={item.title}
                         key={index}
