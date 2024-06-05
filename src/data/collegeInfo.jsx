@@ -121,7 +121,7 @@ export const basicInfo = [
 export const structureInfo = [
     {
         title: 'Информация о структуре и об органах управления образовательной организации',
-        content: <a className='flex items-center underline gap-1' href="https://tspk.org/images/oficial_dokument_2016/struktura.pdf"><img src={docPDF} alt="PDF-файл" /> Просмотр</a>
+        content: <LinkDataMode link='https://tspk.org/images/oficial_dokument_2016/struktura.pdf' text='Просмотр' /> 
     },
     {
         title: 'Наименование структурных подразделений (органов управления) при наличии',
@@ -131,30 +131,30 @@ export const structureInfo = [
             <p>Должность: Зав. отделением специальности преподавание в начальных классах к.п.н.тел.: 8 (8482) 24-10-25e-mail: <a className='underline' href="mailto:so_tspk@samara.edu.ru">so_tspk@samara.edu.ru</a></p>,
             'Местонахождение структурных подразделений: Российская Федерация, 445012, Самарская область, г. Тольятти, ул. Мурысева, 84 (учебный корпус № 1)',
             <p>Адрес официального сайта в информационно-телекоммуникационной сети "Интернет" структурных подразделений (органов управления) образовательной организации: <a className='underline' href='https://tspk.org'>https://tspk.org</a></p>,
-            <a className='flex items-center underline gap-1' href="https://tspk.org/images/Local_act/Polozenie_o_strukturnom_podrazdelenii.pdf"><img src={docPDF} alt="PDF-файл" /> Положение о структурном подразделении</a>
+            <LinkDataMode link='https://tspk.org/images/Local_act/Polozenie_o_strukturnom_podrazdelenii.pdf' text='Положение о структурном подразделении' /> 
         ]
     }, 
     {
         title: 'Наблюдательный совет',
         content: [
-            <a className='flex items-center underline gap-1' href="https://tspk.org/images/Local_act/Polozenie_o_nabludatelnom_sovete.pdf"><img src={docPDF} alt="PDF-файл" /> Положение о Наблюдательном совете</a>,
-            <a className='flex items-center underline gap-1' href="https://tspk.org/images/Local_act/Prikaz_o_nabl_sovete.pdf"><img src={docPDF} alt="PDF-файл" /> Приказ об утверждении состава о Наблюдательном совете</a>,
-            <a className='flex items-center underline gap-1' href="https://tspk.org/images/Local_act/Polozenie_o_nabludatelnom_sovete_dopolnenie.pdf"><img src={docPDF} alt="PDF-файл" /> Дополнение к положению о наблюдательном совете</a>,
-            <a className='flex items-center underline gap-1' href="https://tspk.org/images/Local_act/izmenenia_nabl_sovet_705-od.pdf"><img src={docPDF} alt="PDF-файл" />Приказ № 322-од от 20.05.2024 о внесении изменений в приказ МО и Н СО от 20.09.2019 № 300-од</a>,
-            <a className='flex items-center underline gap-1' href="https://tspk.org/images/Local_act/Ob_izm_v_sostav_nab_soveta_13-od.pdf"><img src={docPDF} alt="PDF-файл" />Приказ 670-од от 04.04.2023 о внесении изменений в отдельные приказы МО и Н СО</a>
+            <LinkDataMode link='https://tspk.org/images/Local_act/Polozenie_o_nabludatelnom_sovete.pdf' text='Положение о Наблюдательном совете' />,
+            <LinkDataMode link='https://tspk.org/images/Local_act/Prikaz_o_nabl_sovete.pdf' text='Приказ об утверждении состава о Наблюдательном совете' />,
+            <LinkDataMode link='https://tspk.org/images/Local_act/Polozenie_o_nabludatelnom_sovete_dopolnenie.pdf' text='Дополнение к положению о наблюдательном совете' />,
+            <LinkDataMode link='https://tspk.org/images/Local_act/izmenenia_nabl_sovet_705-od.pdf' text='Приказ № 322-од от 20.05.2024 о внесении изменений в приказ МО и Н СО от 20.09.2019 № 300-од' />,
+            <LinkDataMode link='https://tspk.org/images/Local_act/Ob_izm_v_sostav_nab_soveta_13-od.pdf' text='Приказ 670-од от 04.04.2023 о внесении изменений в отдельные приказы МО и Н СО' />
         ]
     }, 
     {
         title: 'Конференция работников и обучающихся образовательной организации',
-        content: <a className='flex items-center underline gap-1' href="https://tspk.org/images/Local_act/Polozenie_o_konf.pdf"> <img src={docPDF} alt="PDF-файл" /> Положение о Конференции работников и обучающихся образовательной организацииложение о Конференции работников и обучающихся образовательной организации</a>
+        content: <LinkDataMode link='https://tspk.org/images/Local_act/Polozenie_o_konf.pdf' text='Положение о Конференции работников и обучающихся образовательной организацииложение о Конференции работников и обучающихся образовательной организации' /> 
     }, 
     {
         title: 'Совет колледжа образовательной организации',
-        content: <a className='flex items-center underline gap-1' href="https://tspk.org/images/Local_act/Polozenie_o_sovete_uchrezdenia.pdf"> <img src={docPDF} alt="PDF-файл" /> Положение о Совете колледжа образовательной организации</a>
+        content: <LinkDataMode link='https://tspk.org/images/Local_act/Polozenie_o_sovete_uchrezdenia.pdf' text='Положение о Совете колледжа образовательной организации' />
     },
     {
         title: 'Педагогический совет образовательной организации',
-        content: <a className='flex items-center underline gap-1' href="https://tspk.org/images/Local_act/Polozenie_o_pedagogicheskom_sovete.pdf"> <img src={docPDF} alt="PDF-файл" /> Положение о педагогическом совете образовательной организации</a>
+        content: <LinkDataMode link='https://tspk.org/images/Local_act/Polozenie_o_pedagogicheskom_sovete.pdf' text='Положение о педагогическом совете образовательной организации' />  
     },
 ]
 

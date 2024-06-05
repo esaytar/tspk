@@ -6,17 +6,17 @@ export default function DataCollegeMenu({main, liW, ulID, index, color}) {
         {
             classes: false,
             value: 'Основные сведения',
-            link: '/basic-data'
+            link: '/infos/basic-data'
         },
         {
             classes: true,
             value: 'Структура и органы управления образовательной организацией',
-            link: '/structure-college'
+            link: '/infos/structure-college'
         },
         {
             classes: false,
             value: 'Документы',
-            link: '/documents'
+            link: '/infos/documents'
         },
         {
             classes: false,

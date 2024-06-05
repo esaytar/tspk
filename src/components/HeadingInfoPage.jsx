@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import ArrowBottom from '../assets/icons/components/ArrowBottom';
 import DataCollegeMenu from '../components/menu/DataCollegeMenu'
 
-export default function HeadingInfoPage({listRef, titleList}) {
+export default function HeadingInfoPage({listRef, titleList, titlePage}) {
     const [isOpened, setIsOpened] = useState(false)
 
     useEffect(() => {
@@ -18,7 +18,7 @@ export default function HeadingInfoPage({listRef, titleList}) {
 
     return (
         <div className='w-full flex justify-between items-center flex-col lg:flex-row gap-[1.43rem]'>
-            <h1 className='lg:text-[1.81rem] text-grayMainText font-semibold lg:w-10/12 text-[1.28rem]'>Сведения об образовательной организации</h1>
+            <h1 className='lg:text-[1.81rem] text-grayMainText font-semibold lg:w-10/12 text-[1.28rem]'>{titlePage}</h1>
             <div ref={listRef} className='w-full relative text-18'>
                 <div className='flex w-full justify-between border-mainBlue/50 border-[2px] rounded-[40px] px-[1.71rem] py-[0.86rem] items-center 
                 lg:px-10 lg:py-5 cursor-pointer' onClick={() => {setIsOpened(!isOpened)}}>
