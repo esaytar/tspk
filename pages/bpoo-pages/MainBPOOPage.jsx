@@ -6,6 +6,8 @@ import HeadingInfoPage from '../../../src/components/HeadingInfoPage';
 import ProvisionPage from './ProvisionPage';
 import EduProvPage from './EduProvPage';
 import UsefulLinksPage from './UsefulLinksPage';
+import ConferencesPage from './ConferencesPage';
+import mainImg from '../../../src/assets/bpoo/main.jpg'
 
 export default function MainBPOOPage() {
     const listRef = useRef()
@@ -21,7 +23,9 @@ export default function MainBPOOPage() {
             <Helmet>
                 <title>Базовая профессиональная образовательная организация | Тольяттинский социально-педагогический колледж</title>
             </Helmet>
-            <div className='w-full h-[442px] bg-mainBlue lg:rounded-[1.25rem] rounded-[0.71rem]'></div>
+            <div className='w-full h-[442px] lg:rounded-[1.25rem] rounded-[0.71rem]'>
+                <img src={mainImg} alt="" />
+            </div>
             <div className='w-full px-[2.14rem] py-[1.43rem] rounded-[0.71rem] shadow-newShad 
                 lg:rounded-[2.5rem] lg:px-10 lg:py-5'>
                 <p className='text-18'>Базовая профессиональная образовательная организация (БПОО) - профессиональная образовательная организация, обеспечивающая поддержку функционирования региональной системы профессионального образования инвалидов и лиц с ОВЗ в Самарской области. БПОО осуществляет методическое сопровождение организации и реализации профессионального образования в профессиональных образовательных организациях Самарской области.</p>
@@ -37,6 +41,7 @@ export default function MainBPOOPage() {
                 <Route path='material-provision' element={<ProvisionPage func={changeTitleList}/>}></Route>
                 <Route path='education-provision' element={<EduProvPage func={changeTitleList}/>}></Route>
                 <Route path='useful-links' element={<UsefulLinksPage func={changeTitleList}/>}></Route>
+                <Route path='conferences' element={<ConferencesPage func={changeTitleList}/>}></Route>
             </Routes>
         </div> 
     )
