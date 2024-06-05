@@ -10,7 +10,7 @@ import LogoTSPK from '../assets/icons/components/LogoTSPK.jsx'
 export default function Footer() {
     return (
         <div className='w-full bg-mainGray flex justify-center items-center md:py-10 px-[2.14rem] py-[1.42rem] flex-col'>
-            <div className="flex flex-col 2xl:w-[73%] w-full gap-[1.42rem] lg:gap-10 items-center justify-center">
+            <div className="flex flex-col 2xl:w-[73%] lg:max-w-[80rem] 2xl:min-w-[84.5rem] w-full gap-[1.42rem] lg:gap-10 items-center justify-center">
                 <div className="flex gap-[1.43rem] lg:gap-[8.19rem] w-full md:items-start flex-col md:flex-row">
                     <div className="flex gap-5 items-center self-start md:order-none justify-center">
                         <LogoTSPK styles='fill-white/80'/>
