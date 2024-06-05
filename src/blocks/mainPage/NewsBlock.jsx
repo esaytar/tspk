@@ -6,11 +6,19 @@ register();
 
 export default function NewsBlock() {
     const [news, setNews] = useState(null)
-    const [type, setType] = useState()
 
-    // function setTypeAttachment() {
-    //     if ()
-    // }
+    function getImgUrl(attachment) {
+        switch(attachment.type) {
+            case 'photo':
+                return findMaxSizes(attachment.photo.sizes)
+            case 'video':
+                return findMaxSizes(attachment.video.image)
+            case 'doc':
+                return attachment.doc.url
+            default:
+                return null
+        }
+    }
 
     useEffect(() => {
         async function fetchData() {
@@ -27,28 +35,18 @@ export default function NewsBlock() {
                 }
                 let data = await response.json()
 
-                const newsItems = data.response.items.map((item, index) => (
-                    <swiper-slide>
+                const newsItems = data.response.items.map((item, index) => {
+                    const url = getImgUrl(item.attachments ? item.attachments[0] : null)
+                    return (<swiper-slide>
                         <NewsCard
                             key={index}
                             text={item.text}
                             date={convertToNormalDate(item.date)}
                             link={`https://vk.com/tspk63?w=wall${item.owner_id}_${item.id}`}
-                            img={() => {
-                                switch(item.attachments[0].type) {
-                                    case 'photo':
-                                        findMaxSizes(item.attachments[0].photo.sizes)
-                                        break
-                                    case 'video':
-                                        findMaxSizes(item.attachments[0].video.image)
-                                        break
-                                    case 'doc':
-                                        return item.attachments[0].doc.url
-                                }
-                            }}
+                            img={url}
                         /> 
                     </swiper-slide>
-                ))
+                )})
                 setNews(newsItems)
             } catch (error) {
                 setNews(
