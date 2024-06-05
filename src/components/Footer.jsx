@@ -18,7 +18,7 @@ export default function Footer() {
                     <div className="flex w-full justify-between flex-col md:flex-row gap-[1.42rem] md:gap-0">
                         <nav className="flex flex-col gap-[0.71rem] md:gap-5 text-white">
                             <p className='text-[1.14rem] md:text-[1rem]'>Сведения об образовательной организации</p>
-                            <DataCollegeMenu main='text-[0.85rem] lg:text-[0.75rem] gap-2.5' liW='w-[15rem]'/>
+                            <DataCollegeMenu main='text-[0.85rem] lg:text-[0.75rem] gap-2.5' liW='!w-[15rem]'/>
                         </nav>
                         <nav className="flex flex-col gap-[0.71rem] md:gap-5 text-white">
                             <p className='text-[1.14rem] md:text-[1rem]'>Колледж</p>
@@ -26,7 +26,7 @@ export default function Footer() {
                         </nav>
                         <nav className="flex flex-col gap-[0.71rem] md:gap-5 text-white">
                             <p className='text-[1.14rem] md:text-[1rem]'><a href="">БПОО</a></p>
-                            <BPOOMenu main='text-[0.75rem] gap-2.5' liW='w-[16rem]'/>
+                            <BPOOMenu main='text-[0.75rem] gap-2.5' liW='!w-[16rem]'/>
                             <p className='text-[1.14rem] lg:text-[1rem]'><a href="">Демонстрационный экзамен</a></p>
                             <p className='text-[1.14rem] lg:text-[1rem]'><Link to='/contacts'>Контакты</Link></p>
                             <div className='flex gap-5 items-center self-center lg:self-start'>
