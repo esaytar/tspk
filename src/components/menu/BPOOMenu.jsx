@@ -21,7 +21,7 @@ export default function BPOOMenu({ulID, index, main, liW, color}) {
         {
             classes: false,
             value: 'Конференции',
-            link: ''
+            link: '/bpoo/conferences'
         },
         {
             classes: false,
@@ -34,7 +34,7 @@ export default function BPOOMenu({ulID, index, main, liW, color}) {
         <ul className={`${ulID === index ? 'flex' : 'hidden'} flex-col  ${main}`}>
             {
                 items.map((item, index) => (
-                    <li className={`${item.classes && liW ? liW : ''} `} key={index}>
+                    <li className={`${item.classes && liW ? liW : ''} w-fit`} key={index}>
                         <Link to={item.link} className={`${color === undefined ? 'text-white/60 hover:text-white' : color}`}>
                             {item.value}
                         </Link>
