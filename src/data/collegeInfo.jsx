@@ -163,11 +163,17 @@ export const documentsInfo = [
         title: 'Устав образовательной организации',
         content: <MoreLinksMode>
                     <img src={docPDF} alt="" /> 
-                    <a className='underline' href="https://tspk.org/images/oficial_dokument_2016/struktura.pdf">Просмотр</a> 
-                    | Изменения: 
-                    <a className='underline' href="https://tspk.org/images/oficial_dokument_2019/Ystav_GAPOY_TSPK_2019_edit.pdf">05.02.2019</a> |
-                    <a className='underline' href="https://tspk.org/images/SvediniaObOrg/2023/Ystav_GAPOY_TSPK_2023_edit.pdf">22.06.2023</a> |
-                    <a className='underline' href="https://tspk.org/images/SvediniaObOrg/2023/Ystav_GAPOY_TSPK_2023_edit_2.pdf">04.10.2023</a>
+                    <span className='flex flex-col sm:flex-row gap-1'>
+                        <span className='flex gap-1 flex-wrap'>
+                            <a className='underline' href="https://tspk.org/images/oficial_dokument_2016/struktura.pdf">Просмотр</a> 
+                            | Изменения:
+                        </span>
+                        <span className='flex gap-1 flex-wrap'>
+                            <a className='underline' href="https://tspk.org/images/oficial_dokument_2019/Ystav_GAPOY_TSPK_2019_edit.pdf">05.02.2019</a> |
+                            <a className='underline' href="https://tspk.org/images/SvediniaObOrg/2023/Ystav_GAPOY_TSPK_2023_edit.pdf">22.06.2023</a> |
+                            <a className='underline' href="https://tspk.org/images/SvediniaObOrg/2023/Ystav_GAPOY_TSPK_2023_edit_2.pdf">04.10.2023</a>
+                        </span>
+                    </span>
                 </MoreLinksMode>
     }, 
     {
