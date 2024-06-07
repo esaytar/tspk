@@ -5,6 +5,7 @@ import HeadingInfoPage from '../../../src/components/HeadingInfoPage';
 import BasicDataPage from './BasicDataPage';
 import ManagementStructurePage from './ManagementStructurePage';
 import DocumentsPage from './DocumentsPage';
+import StandartsPage from './StandartsPage';
 
 export default function MainInfoPage() {
     const listRef = useRef()
@@ -31,6 +32,7 @@ export default function MainInfoPage() {
                 <Route path='basic-data' element={<BasicDataPage func={changeTitleList}/>}></Route>
                 <Route path='structure-college' element={<ManagementStructurePage func={changeTitleList}/>}></Route>
                 <Route path='documents' element={<DocumentsPage func={changeTitleList}/>}></Route>
+                <Route path='standarts' element={<StandartsPage func={changeTitleList}/>}></Route>
             </Routes>
         </div>
     )

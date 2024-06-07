@@ -26,7 +26,7 @@ export default function DataCollegeMenu({main, liW, ulID, index, color}) {
         {
             classes: false,
             value: 'Образовательные стандарты и требования',
-            link: ''
+            link: '/infos/standarts'
         },
         {
             classes: true,

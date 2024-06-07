@@ -286,3 +286,53 @@ export const documentsInfo = [
         ]
     }
 ]
+
+export const standartsInfo = [
+    {
+        title: 'УГС 09.00.00 "Информатика и вычислительная техника',
+        content: [
+            <LinkDataMode image={docPDF} link='https://tspk.org/images/SvediniaObOrg/2019/standarty/09.01.01_OISiR.pdf' text='09.01.03 "Оператор информационных систем и ресурсов" № 974 от 19 декабря 2022 г.'/>,
+            <LinkDataMode image={docPDF} link='https://tspk.org/images/SvediniaObOrg/2019/standarty/09.01.03%20MCI.pdf' text='09.01.03 "Мастер по обработке цифровой информации" № 854 от 2 августа 2013 г.'/>,
+            <LinkDataMode image={docPDF} link='https://tspk.org/images/SvediniaObOrg/2019/standarty/09.02.01_KSiK_2.pdf' text='09.02.01 "Компьютерные системы и комплексы" № 849 от 28 июля 2014 г.'/>,
+            <LinkDataMode image={docPDF} link='https://tspk.org/images/SvediniaObOrg/2019/standarty/09.02.01_KSiK.pdf' text='09.02.01 "Компьютерные системы и комплексы" № 362 от 25 мая 2022 г.'/>,
+            <LinkDataMode image={docPDF} link='https://tspk.org/images/SvediniaObOrg/2019/standarty/09.02.04%20IS.pdf' text='09.02.04 "Информационные системы" (по отраслям) № 525 от 14 мая 2014 г.'/>,
+            <LinkDataMode image={docPDF} link='https://tspk.org/images/SvediniaObOrg/2019/standarty/09.02.07%20ISIP.pdf' text='09.02.07 "Информационные системы и программирование" № 1547 от 9 декабря 2016 г.'/>,
+        ]
+    }, 
+    {
+        title: 'УГС 39.00.00 Социология и социальная работа',
+        content: [
+            <LinkDataMode image={docPDF} link='https://tspk.org/images/SvediniaObOrg/2019/standarty/39.02.01%20SR.pdf' text='39.02.01 "Социальная работа" № 506 от 12 мая 2014 г.'/>,
+            <LinkDataMode image={docPDF} link='https://tspk.org/images/SvediniaObOrg/2019/standarty/39.02.01_SR_2.pdf' text='39.02.01 "Социальная работа" № 773 от 26 авуста 2022 г.'/>,
+        ]
+    },
+    {
+        title: 'УГС 44.00.00 Образование и педагогические науки',
+        content: [
+            <LinkDataMode image={docPDF} link='https://tspk.org/images/SvediniaObOrg/2019/standarty/44.02.01_DO_1.pdf' text='44.02.01 "Дошкольное образование" № 743 от 1351 октября 2014 г.'/>,
+            <LinkDataMode image={docPDF} link='https://tspk.org/images/SvediniaObOrg/2019/standarty/44.02.01%20DO.pdf' text='44.02.01 "Дошкольное образование" № 743 от 17 августа 2022 г.'/>,
+            <LinkDataMode image={docPDF} link='https://tspk.org/images/SvediniaObOrg/2019/standarty/44.02.02%20NK.pdf' text='44.02.02 "Преподавание в начальных классах" № 1353 от 27 октября 2014 г.'/>,
+            <LinkDataMode image={docPDF} link='https://tspk.org/images/SvediniaObOrg/2019/standarty/44.02.02_NK_2.pdf' text='44.02.02 "Преподавание в начальных классах" № 742 от 17 августа 2022 г.'/>,
+            <LinkDataMode image={docPDF} link='https://tspk.org/images/SvediniaObOrg/2019/standarty/44.02.03%20PDO.pdf' text='44.02.03 "Педагогика дополнительного образования" № 998 от 13 августа 2014 г.'/>,
+            <LinkDataMode image={docPDF} link='https://tspk.org/images/SvediniaObOrg/2019/standarty/44.02.04%20SDO.pdf' text='44.02.04 "Специальное дошкольное образование" № 1354 от 27 октября 2014 г.'/>,
+            <LinkDataMode image={docPDF} link='https://tspk.org/images/SvediniaObOrg/2019/standarty/44.02.04_SDO_2.pdf' text='44.02.04 "Специальное дошкольное образование" № 687 от 14 сентября 2023 г.'/>,
+        ]
+    },
+    {
+        title: 'УГС 46.00.00 История и археология',
+        content: <LinkDataMode image={docPDF} link='https://tspk.org/images/SvediniaObOrg/2019/standarty/46.02.01%20DOYA.pdf' text='46.02.01 "Документационное обеспечение управления и архивоведение" № 975 от 11 августа 2014 г.'/>
+    },
+    {
+        title: 'УГС 49.00.00 Физическая культура и спорт',
+        content: [
+            <LinkDataMode image={docPDF} link='https://tspk.org/images/SvediniaObOrg/2019/standarty/49.02.01%20FK.pdf' text='49.02.01 "Физическая культура" № 976 от 11 августа 2014 г.'/>,
+            <LinkDataMode image={docPDF} link='https://tspk.org/images/SvediniaObOrg/2019/standarty/49.02.01%20FK.pdf' text='49.02.01 "Физическая культура" № 968 от 11 ноября 2022 г.'/>,
+            <LinkDataMode image={docPDF} link='https://tspk.org/images/SvediniaObOrg/2019/standarty/49.02.02%20AFK.pdf' text='49.02.02 "Адаптивная физическая культура" № 994 от 13 августа 2014 г.'/>,
+            <LinkDataMode image={docPDF} link='https://tspk.org/images/SvediniaObOrg/2019/standarty/49.02.02_AFK_2.pdf' text='49.02.02 "Адаптивная физическая культура" № 640 от 28 августа 2023 г.'/>,
+        ]
+    },
+    {
+        title: 'Об утвержденных образовательных стандартах, самостоятельно устанавливаемых требованиях с приложением образовательных стандартов, самостоятельно устанавливаемых требований в форме электронного документа или в виде активных ссылок, непосредственный переход по которым позволяет получить доступ к образовательному стандарту, самостоятельно устанавливаемым требованиям в форме электронного документа',
+        content: 'Подпункт не требуется'
+    }
+]

@@ -5,7 +5,7 @@ export default function LinkDataMode({link, text, image, alter, person}) {
         <p className='flex items-center gap-[5px]'>
             <img src={image} alt={alter} className='w-[20px] h-[20px]' /> 
             <span>
-                <a className='underline w-fit' href={link}> {text}</a>
+                <a className='underline w-fit' href={link} target='_blank'> {text}</a>
                 {person && ( <span className='text-grayMainText/50'>{person}</span> )}
             </span>
         </p>
