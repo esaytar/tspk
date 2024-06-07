@@ -11,11 +11,11 @@ export default function NewsBlock() {
     function getImgUrl(attachment) {
         switch(attachment.type) {
             case 'photo':
-                return findMaxSizes(attachment.photo.sizes)
+                return findMaxSizes(attachment.photo.sizes, attachment.type)
             case 'video':
-                return findMaxSizes(attachment.video.image)
+                return findMaxSizes(attachment.video.image, attachment.type)
             case 'doc':
-                return findMaxSizes(attachment.doc.preview.photo.sizes)
+                return findMaxSizes(attachment.doc.preview.photo.sizes, attachment.type)
             default:
                 return alternative
         }
@@ -58,14 +58,15 @@ export default function NewsBlock() {
         fetchData();
     }, [])
 
-    function findMaxSizes(array) {
+    function findMaxSizes(array, type) {
         let url = ''
         console.log(array)
         array.map(item => {
             if (480 <= item.width <= 630) {
-                url = item.url
+                url = type === 'doc' ? item.src : item.url
             } 
         })
+        console.log(url)
         return url
     }
 
