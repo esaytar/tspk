@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react'
 import NewsCard from '../../components/NewsCard'
 import { register } from 'swiper/element/bundle'
+import alternative from '../../assets/alternative.jpg'
 
 register();
 
@@ -14,9 +15,9 @@ export default function NewsBlock() {
             case 'video':
                 return findMaxSizes(attachment.video.image)
             case 'doc':
-                return attachment.doc.url
+                return findMaxSizes(attachment.doc.preview.photo.sizes)
             default:
-                return null
+                return alternative
         }
     }
 
