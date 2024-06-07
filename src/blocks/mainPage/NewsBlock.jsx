@@ -31,7 +31,6 @@ export default function NewsBlock() {
                     }
                 });
                 if (!response.ok) {
-                    
                     throw new Error(`Network response was not ok: ${response.statusText}`);
                 }
                 let data = await response.json()
@@ -62,7 +61,7 @@ export default function NewsBlock() {
     function findMaxSizes(array) {
         let url = ''
         array.map(item => {
-            if (480 <= item.width <= 600) {
+            if (480 <= item.width <= 630) {
                 url = item.url
             } 
         })
