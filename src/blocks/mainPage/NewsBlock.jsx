@@ -60,6 +60,7 @@ export default function NewsBlock() {
 
     function findMaxSizes(array) {
         let url = ''
+        console.log(array)
         array.map(item => {
             if (480 <= item.width <= 630) {
                 url = item.url
