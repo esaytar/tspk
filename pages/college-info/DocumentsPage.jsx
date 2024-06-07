@@ -27,31 +27,6 @@ export default function DocumentsPage({func}) {
             }
             <InfoString 
                 title="Предписание органов осуществляющих контроль (надзор) в сфере образования (до подтверждения органом, осуществляющим государственный контроль (надзор) в сфере образования, исполнения предписания или признания его недействительным в установленном законом порядке) (при наличии)">
-                    {/* <div className='flex gap-1'>
-                        <div>Проверяющая организация</div>
-                        <div>Тема проверки</div>
-                        <div>Дата проведения проверки</div>
-                        <div>Дата проведения проверки</div>
-                        <div>Устранения нарушений</div>
-                    </div>
-                    <div className="grid grid-rows-4 grid-cols-5 justify-items-center gap-1">
-                        <div className='p-10 shadow-newShad bg-white w-full'>ОТДЕЛЕНИЕ ФОНДА ПЕНСИОННОГО И СОЦИАЛЬНОГО СТРАХОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ ПО САМАРСКОЙ ОБЛАСТИ</div>
-                        <div className='p-10 shadow-newShad bg-white w-full'>Плановая проверка полноты и достоверности предоставляемых страхователем или застрахованным лицом сведений и документов, необходимых для назначения и выплаты страхового обеспечения, а также для возмещения расходов страхователя на выплату социального пособия на погребение</div>
-                        <div className='p-10 shadow-newShad bg-white w-full'>02.03.2023 - 17.03.2023</div>
-                        <div className='p-10 shadow-newShad bg-white w-full'><a href="">Акт выездной проверки</a></div>
-                        <div className='p-10 shadow-newShad bg-white w-full'>Нарушений не выявленно</div>
-                        <div className='p-10 shadow-newShad bg-white w-full'>Прокуратора Комсомольского района г. Тольятти</div>
-                        <div className='p-10 shadow-newShad bg-white w-full'>Защита прав и свобод граждан, охраняемых законом интересов общества и государства Проверка исполнения законодательства об образовании, охране здоровья граждан</div>
-                        <div className='p-10 shadow-newShad bg-white w-full'>15.03.2023 - 20.03.2023</div>
-                        <div className='p-10 shadow-newShad bg-white w-full'><a href="">Решение о проведении проверки</a></div>
-                        <div className='p-10 shadow-newShad bg-white w-full'><a href="">Представление об устранении нарушений</a></div>
-                        <div className='p-10 shadow-newShad bg-white w-full'>Прокуратора Комсомольского района г. Тольятти</div>
-                        <div className='p-10 shadow-newShad bg-white w-full'>Исполнение требований законодательства о противодействии терроризму</div>
-                        <div className='p-10 shadow-newShad bg-white w-full'>29.03.2023 - 29.03.2023</div>
-                        <div className='p-10 shadow-newShad bg-white w-full'><a href="">Требование</a></div>
-                        <div className='p-10 shadow-newShad bg-white w-full'>Нарушений не выявленно</div> 
-                    </div> */}
-
                     <div className='w-full overflow-hidden'>
                         <div className='overflow-auto'>
                             <table className='border-spacing-2 table-fixed text-[1.14rem] lg:text-18'>
