@@ -10,7 +10,7 @@ export default function NewsBlock() {
 
     function checkRepost(item) {
         if (item.copy_history.length) {
-            return [item.copy_history.text, getImgUrl(item.copy_history.attachments)]
+            return [item.copy_history[0].text, getImgUrl(item.copy_history[0].attachments[0])]
         } else return false
     }
 
