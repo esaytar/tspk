@@ -49,7 +49,7 @@ export default function NewsBlock() {
                     return (<swiper-slide>
                         <NewsCard
                             key={index}
-                            text={item.text !== '' ? item.text : repostText}
+                            text={repostText !== null ? repostText : item.text}
                             date={convertToNormalDate(item.date)}
                             link={`https://vk.com/tspk63?w=wall${item.owner_id}_${item.id}`}
                             img={url === null ? urlRepost : url}
