@@ -8,7 +8,15 @@ register();
 export default function NewsBlock() {
     const [news, setNews] = useState(null)
 
+    function checkRepost() {
+        if (item.copy_history.length) {
+            return [copy_history.text, getImgUrl(copy_history.attachments)]
+        } else return false
+    }
+
     function getImgUrl(attachment) {
+        if (attachment === null) return 
+
         switch(attachment.type) {
             case 'photo':
                 return findMaxSizes(attachment.photo.sizes, attachment.type)
@@ -36,14 +44,15 @@ export default function NewsBlock() {
                 let data = await response.json()
 
                 const newsItems = data.response.items.map((item, index) => {
-                    const url = getImgUrl(item.attachments ? item.attachments[0] : null)
+                    const url = getImgUrl(item.attachments.length ? item.attachments[0] : null)
+                    const [repostText, urlRepost] = checkRepost(item)
                     return (<swiper-slide>
                         <NewsCard
                             key={index}
-                            text={item.text}
+                            text={item.text !== '' ? item.text : repostText}
                             date={convertToNormalDate(item.date)}
                             link={`https://vk.com/tspk63?w=wall${item.owner_id}_${item.id}`}
-                            img={url}
+                            img={url === null ? urlRepost : url}
                         /> 
                     </swiper-slide>
                 )})
