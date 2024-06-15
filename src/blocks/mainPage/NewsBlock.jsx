@@ -8,7 +8,7 @@ register();
 export default function NewsBlock() {
     const [news, setNews] = useState(null)
 
-    function checkRepost() {
+    function checkRepost(item) {
         if (item.copy_history.length) {
             return [copy_history.text, getImgUrl(copy_history.attachments)]
         } else return false
