@@ -11,12 +11,12 @@ export default function NewsBlock() {
     function checkRepost(item) {
         if (item.copy_history) {
             return [item.copy_history[0].text, getImgUrl(item.copy_history[0].attachments[0])]
-        } else return false
+        } 
+        return [null, null];
     }
 
     function getImgUrl(attachment) {
-        if (attachment === null) return 
-
+        if (attachment === null) return null
         switch(attachment.type) {
             case 'photo':
                 return findMaxSizes(attachment.photo.sizes, attachment.type)
@@ -25,7 +25,7 @@ export default function NewsBlock() {
             case 'doc':
                 return findMaxSizes(attachment.doc.preview.photo.sizes, attachment.type)
             default:
-                return alternative
+                return null
         }
     }
 
