@@ -9,7 +9,7 @@ export default function NewsBlock() {
     const [news, setNews] = useState(null)
 
     function checkRepost(item) {
-        if (item.copy_history.length) {
+        if (item.copy_history) {
             return [item.copy_history[0].text, getImgUrl(item.copy_history[0].attachments[0])]
         } else return false
     }
