@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react'
+import React, {useEffect} from 'react'
 import {documentsInfo} from '../../../src/data/collegeInfo.jsx'
 import InfoString from '../../../src/components/InfoString.jsx';
 
