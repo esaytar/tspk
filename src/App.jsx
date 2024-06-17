@@ -8,7 +8,7 @@ import MarqueeBlock from './components/MarqueeBlock'
 import MainInfoPage from '../public/pages/college-info/MainInfoPage'
 import MainBPOOPage from '../public/pages/bpoo-pages/MainBPOOPage'
 
-function App() {
+export default function App() {
     const menuRef = useRef(null);
     const location = useLocation()
     const [isMain, setIsMain] = useState(false)
@@ -32,5 +32,3 @@ function App() {
         </div>
     )
 }
-
-export default App

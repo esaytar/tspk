@@ -1,6 +1,5 @@
 import React from 'react'
-import { useState, useRef, useEffect } from 'react';
-import HeadingInfoPage from '../../../src/components/HeadingInfoPage';
+import {useEffect } from 'react';
 import LogoTSPK from '../../../src/assets/icons/components/LogoTSPK';
 import InfoString from '../../../src/components/InfoString';
 import {basicInfo} from '../../../src/data/collegeInfo.jsx'

@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import ArrowBottom from '../assets/icons/components/ArrowBottom';
 import DataCollegeMenu from '../components/menu/DataCollegeMenu'
 import BPOOMenu from './menu/BPOOMenu';
