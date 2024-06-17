@@ -11,7 +11,7 @@ export default function QuestionForm() {
                 <input type="tel" placeholder='Номер телефона' className='bg-mainGray/5 p-[1.1rem] rounded-[1.25rem] text-18'/>
                 <textarea name="" id="" placeholder='Сообщение' className='bg-mainGray/5 p-[1.1rem] rounded-[1.25rem] resize-none text-18'></textarea>
             </div>
-            <BlueButton styles='p-[1.1rem] text-white rounded-[1.25rem] text-18'>Отправить</BlueButton>
+            <BlueButton styles='p-[1.1rem] text-white rounded-[1.25rem] text-18' reload={() => {location.reload()}}>Отправить</BlueButton>
         </form>
     )
 }

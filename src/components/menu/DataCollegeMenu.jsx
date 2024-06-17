@@ -46,7 +46,7 @@ export default function DataCollegeMenu({main, liW, ulID, index, color}) {
         {
             classes: false,
             value: 'Платные образовательные услуги',
-            link: ''
+            link: '/infos/paid-edu-services'
         },
         {
             classes: false,
@@ -66,7 +66,7 @@ export default function DataCollegeMenu({main, liW, ulID, index, color}) {
         {
             classes: false,
             value: 'Международное сотрудничество',
-            link: ''
+            link: '/infos/international-cooperation'
         },
     ]
 

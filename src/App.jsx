@@ -1,11 +1,10 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState, useRef} from 'react'
 import { Route, Routes, useLocation } from "react-router-dom"
 import MainPage from '../public/pages/MainPage'
 import Header from './components/Header/Header'
 import ContactsPage from '../public/pages/ContactsPage'
 import Footer from './components/Footer'
 import MarqueeBlock from './components/MarqueeBlock'
-import DocsPage from '../public/pages/bpoo-pages/DocsPage'
 import MainInfoPage from '../public/pages/college-info/MainInfoPage'
 import MainBPOOPage from '../public/pages/bpoo-pages/MainBPOOPage'
 

@@ -6,6 +6,8 @@ import BasicDataPage from './BasicDataPage';
 import ManagementStructurePage from './ManagementStructurePage';
 import DocumentsPage from './DocumentsPage';
 import StandartsPage from './StandartsPage';
+import InterCoopPage from './InterCoopPage';
+import PaidServicesPage from './PaidServicesPage';
 
 export default function MainInfoPage() {
     const listRef = useRef()
@@ -19,7 +21,7 @@ export default function MainInfoPage() {
         <div className='flex flex-col gap-[1.43rem] px-[2.14rem] w-full mt-[5.5rem] 
         lg:max-w-[80rem] xl:p-0 md:gap-[3.75rem] 2xl:max-w-[73%] 2xl:min-w-[84.5rem]'>
             <Helmet>
-                <title>Сведения об образовательной организации | Тольяттинский социально-педагогический колледж</title>
+                <title>{titleList} | Тольяттинский социально-педагогический колледж</title>
             </Helmet>
             <HeadingInfoPage 
                 listRef={listRef} 
@@ -33,6 +35,8 @@ export default function MainInfoPage() {
                 <Route path='structure-college' element={<ManagementStructurePage func={changeTitleList}/>}></Route>
                 <Route path='documents' element={<DocumentsPage func={changeTitleList}/>}></Route>
                 <Route path='standarts' element={<StandartsPage func={changeTitleList}/>}></Route>
+                <Route path='international-cooperation' element={<InterCoopPage func={changeTitleList}/>}></Route>
+                <Route path='paid-edu-services' element={<PaidServicesPage func={changeTitleList}/>}></Route>
             </Routes>
         </div>
     )
