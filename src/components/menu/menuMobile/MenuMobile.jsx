@@ -1,5 +1,4 @@
 import React from 'react'
-import ArrowBottom from '../../../assets/icons/components/ArrowBottom'
 import './MenuMobile.css'
 import Telegram from '../../../assets/icons/components/Telegram'
 import Vk from '../../../assets/icons/components/Vk'
@@ -49,7 +48,7 @@ export default function MenuMobile({status}) {
                             />
                         ))
                     }
-                    <li className='text-[1.14rem] pb-[1.43rem]'><span></span><Link className="!text-white" to="">Демонcтрационный экзамен</Link></li>
+                    <li className='text-[1.14rem] pb-[1.43rem]'><span></span><Link className="!text-white" to="/error">Демонcтрационный экзамен</Link></li>
                     <li className='text-[1.14rem] pb-[1.43rem]'><span></span><Link className="!text-white" to="/contacts">Контакты</Link></li>
                 </ul>
             </nav>

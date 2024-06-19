@@ -21,7 +21,7 @@ export default function DataCollegeMenu({main, liW, ulID, index, color}) {
         {
             classes: false,
             value: 'Образование',
-            link: ''
+            link: '/error'
         },
         {
             classes: false,
@@ -31,17 +31,17 @@ export default function DataCollegeMenu({main, liW, ulID, index, color}) {
         {
             classes: true,
             value: 'Руководство. Педагогический (научно-педагогический) состав',
-            link: ''
+            link: '/error'
         },
         {
             classes: true,
             value: 'Материально-техническое обеспечение и оснащенность образовательного процесса',
-            link: ''
+            link: '/error'
         },
         {
             classes: true,
             value: 'Стипендии и иные виды материальной поддержки',
-            link: ''
+            link: '/error'
         },
         {
             classes: false,
@@ -51,17 +51,17 @@ export default function DataCollegeMenu({main, liW, ulID, index, color}) {
         {
             classes: false,
             value: 'Финансово-хозяйственная деятельность',
-            link: ''
+            link: '/error'
         },
         {
             classes: true,
             value: 'Вакантные места для приема (перевода) обучающихся',
-            link: ''
+            link: '/error'
         },
         {
             classes: false,
             value: 'Доступная среда',
-            link: ''
+            link: '/error'
         },
         {
             classes: false,

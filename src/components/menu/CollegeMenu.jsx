@@ -1,75 +1,92 @@
 import React from 'react'
+import {Link} from "react-router-dom"
 
 export default function CollegeMenu({ulID, index, main, gap}) {
     const items = [
         [
             {
                 value: 'Абитуриентам',
-                isLink: false
+                isLink: false,
+                link: ''
             },
             {
                 value: 'Приемная комиссия',
-                isLink: true
+                isLink: true,
+                link: '/error'
             },
             {
                 value: 'Специальности',
-                isLink: true
+                isLink: true,
+                link: '/error'
             },
             {
                 value: 'Общежитие',
-                isLink: true
+                isLink: true,
+                link: '/error'
             },
             {
                 value: 'Пофамильный список подавших заявления',
-                isLink: true
+                isLink: true,
+                link: '/error'
             },
             {
                 value: 'Профориентация школьников',
-                isLink: true
+                isLink: true,
+                link: '/error'
             },
             {
                 value: 'Статистика поданных заявлений 2023',
-                isLink: true
+                isLink: true,
+                link: '/error'
             },
         ],
         [
             {
                 value: 'Студентам',
-                isLink: false
+                isLink: false,
+                link: ''
             },
             {
                 value: 'Расписание на каждый день',
-                isLink: true
+                isLink: true,
+                link: '/error'
             },
             {
                 value: 'Содействие трудоустройству выпускников',
-                isLink: true
+                isLink: true,
+                link: '/error'
             },
             {
                 value: 'Информация о вакантных местах для перевода',
-                isLink: true
+                isLink: true,
+                link: '/error'
             },
             {
                 value: 'ЕГЭ 2024',
-                isLink: true
+                isLink: true,
+                link: '/error'
             },
         ],
         [
             {
                 value: 'Преподавателям',
-                isLink: false
+                isLink: false,
+                link: ''
             },
             {
                 value: 'Шаблоны документов',
-                isLink: true
+                isLink: true,
+                link: '/error'
             },
             {
                 value: 'Методические рекомендации преподавателям',
-                isLink: true
+                isLink: true,
+                link: '/error'
             },
             {
                 value: 'Критерии назначения стимулирующих выплат',
-                isLink: true
+                isLink: true,
+                link: '/error'
             },
         ]
     ]
@@ -83,7 +100,7 @@ export default function CollegeMenu({ulID, index, main, gap}) {
                             {
                                 item.map((i, index) => (
                                     <li key={index}>
-                                        {i.isLink ? <a href="" className='text-white/60 hover:text-white'>{i.value}</a> : <p>{i.value}</p>}
+                                        {i.isLink ? <Link to={i.link} className='text-white/60 hover:text-white'>{i.value}</Link> : <p>{i.value}</p>}
                                     </li>
                                 ))
                             }

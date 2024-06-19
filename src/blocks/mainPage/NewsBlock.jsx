@@ -29,6 +29,17 @@ export default function NewsBlock() {
         }
     }
 
+    function findMaxSizes(array, type) {
+        let url = ''
+        array.map(item => {
+            if (480 <= item.width <= 630) {
+                url = type === 'doc' ? item.src : item.url
+            } 
+        })
+        if (url === '') return alternative
+        return url
+    }
+
     useEffect(() => {
         async function fetchData() {
             try {
@@ -42,7 +53,6 @@ export default function NewsBlock() {
                     throw new Error(`Network response was not ok: ${response.statusText}`);
                 }
                 let data = await response.json()
-
                 const newsItems = data.response.items.map((item, index) => {
                     const url = getImgUrl(item.attachments.length ? item.attachments[0] : null)
                     const [repostText, urlRepost] = checkRepost(item)
@@ -66,17 +76,6 @@ export default function NewsBlock() {
         }
         fetchData();
     }, [])
-
-    function findMaxSizes(array, type) {
-        let url = ''
-        array.map(item => {
-            if (480 <= item.width <= 630) {
-                url = type === 'doc' ? item.src : item.url
-            } 
-        })
-        if (url === '') return alternative
-        return url
-    }
 
     const convertToNormalDate = (num) => {
         const date = new Date(num * 1000)

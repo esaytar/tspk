@@ -77,7 +77,7 @@ export default function Header({menuRef}) {
                             </li>
                         ))
                     }
-                    <li><Link to=''>Демонcтрационный экзамен</Link></li>
+                    <li><Link to='/error'>Демонcтрационный экзамен</Link></li>
                     <li><Link to='/contacts'>Контакты</Link></li>
                 </ul>
                 <button className='btnBurger flex flex-col gap-[7px] lg:hidden z-10 pointer' onClick={() => {setIsActive(() => !isActiveMenu)}}>
