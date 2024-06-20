@@ -8,7 +8,7 @@ export default function CriteriaPage({func}) {
     }, [])
 
     return (
-        <div className='text-18 flex flex-col gap-[1.88rem]'>
+        <div className='text-18 flex flex-col gap-[1.45rem]'>
             {
                 criteriInfo.map((item, index) => (
                     <InfoString 
@@ -25,6 +25,7 @@ export default function CriteriaPage({func}) {
                     </InfoString>
                 ))
             }
+            <a className='underline text-mainBlue' href="https://docs.google.com/forms/d/e/1FAIpQLSeeKkWkTECsQLXHFZcFXOciv1ULf1VgWwEEaNkgD-8mwMYmpQ/viewform" target='_blank'>Форма для обсуждения критериев назначения стимулирующих выплат</a>
         </div>
     )
 }

@@ -6,10 +6,6 @@ import QuestionForm from '../../src/components/QuestionForm'
 
 
 export default function ContactsPage() {
-  useEffect(() => {
-    document.title = 'Контакты'
-  }, [])
-
   return (
     <>
       <Helmet>
