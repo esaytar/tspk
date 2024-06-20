@@ -11,7 +11,6 @@ import MenuMobile from '../menu/menuMobile/MenuMobile'
 
 export default function Header({menuRef}) {
     const [isScrolled, setIsScrolled] = useState(false)
-    // const [isOpened, setIsOpened] = useState(false)
     const [resultMenu, setResultMenu] = useState()
     const [counter, setCounter] = useState(0)
     const {isActiveMenu, changeStatusMenu, changeStatusDropdown, isOpened, setFalseStatus} = useContext(MyContext)

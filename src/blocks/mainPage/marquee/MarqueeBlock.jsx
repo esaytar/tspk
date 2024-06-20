@@ -1,13 +1,13 @@
 import React from 'react'
-import LinkedImage from './LinkedImage'
-import edinoeOkno from '../assets/marquee_images/edinoe_okno.jpg'
-import minProsv from '../assets/marquee_images/min_prosv.jpg'
-import navigator from '../assets/marquee_images/navgator.jpg'
-import explanation from '../assets/marquee_images/obiyesnieem.jpg'
-import educat from '../assets/marquee_images/obrazovanie.jpg'
-import communic from '../assets/marquee_images/razgovori.jpg'
-import znanium from '../assets/marquee_images/znanium.jpg'
-import './marquee.css'
+import LinkedImage from '../../../components/LinkedImage'
+import edinoeOkno from '../../../assets/marquee_images/edinoe_okno.jpg'
+import minProsv from '../../../assets/marquee_images/min_prosv.jpg'
+import navigator from '../../../assets/marquee_images/navgator.jpg'
+import explanation from '../../../assets/marquee_images/obiyesnieem.jpg'
+import educat from '../../../assets/marquee_images/obrazovanie.jpg'
+import communic from '../../../assets/marquee_images/razgovori.jpg'
+import znanium from '../../../assets/marquee_images/znanium.jpg'
+import styles from './marquee.module.css'
 
 export default function MarqueeBlock() {
     const images = [
@@ -49,15 +49,15 @@ export default function MarqueeBlock() {
     ]
 
     return (
-        <div className='cont-scroll overflow-hidden whitespace-nowrap m-auto'>
-            <div className='scroll inline-block w-max'>
+        <div className={`${styles.contScroll} cont-scroll overflow-hidden whitespace-nowrap m-auto`}>
+            <div className={`${styles.scroll} inline-block w-max`}>
                 {
                     images.map((image, index) => (
                         <LinkedImage key={index} link={image.link} alt={image.alt} image={image.img}/>
                     ))
                 }
             </div>
-            <div className='scroll inline-block w-max'>
+            <div className={`${styles.scroll} inline-block w-max`}>
                 {
                     images.map((image, index) => (
                         <LinkedImage key={index} link={image.link} alt={image.alt} image={image.img}/>

@@ -2,7 +2,6 @@ import React from 'react'
 import ArrowBottom from '../../assets/icons/components/ArrowBottom'
 
 export default function AccordionMenu({child, name, activeIndex, onAccordionClick, index}) { 
-
     const isActive = index === activeIndex
 
     return (

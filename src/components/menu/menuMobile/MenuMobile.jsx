@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './MenuMobile.css'
 import Telegram from '../../../assets/icons/components/Telegram'
 import Vk from '../../../assets/icons/components/Vk'
@@ -7,7 +7,6 @@ import DataCollegeMenu from '../DataCollegeMenu'
 import CollegeMenu from '../CollegeMenu'
 import BPOOMenu from '../BPOOMenu'
 import AccordionMenu from '../AccordionMenu'
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function MenuMobile({status}) {

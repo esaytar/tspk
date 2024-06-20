@@ -11,4 +11,4 @@
   animation: slide 25s linear infinite;
 }
 
-.cont-scroll:hover .scroll {animation-play-state: paused;}
+.contScroll:hover .scroll {animation-play-state: paused;}
