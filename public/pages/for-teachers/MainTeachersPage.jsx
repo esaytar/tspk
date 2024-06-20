@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import HeadingInfoPage from '../../../src/components/HeadingInfoPage';
 import PatternDocsPage from './PatternDocsPage';
 import CriteriaPage from './CriteriaPage';
+import InstructionsPage from './InstructionsPage';
 
 export default function MainTeacthersPage() {
     const listRef = useRef()
@@ -30,6 +31,7 @@ export default function MainTeacthersPage() {
             <Routes>
                 <Route path='docs' element={<PatternDocsPage func={changeTitleList}/>}></Route>
                 <Route path='criteria-payments' element={<CriteriaPage func={changeTitleList}/>}></Route>
+                <Route path='instructions' element={<InstructionsPage func={changeTitleList}/>}></Route>
             </Routes>
         </div>
     )

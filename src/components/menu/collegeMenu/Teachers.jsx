@@ -16,7 +16,7 @@ export default function Teachers({styles, main, color}) {
         {
             value: 'Методические рекомендации преподавателям',
             isLink: true,
-            link: '/error'
+            link: '/teachers/instructions'
         },
         {
             value: 'Критерии назначения стимулирующих выплат',
