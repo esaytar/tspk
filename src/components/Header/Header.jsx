@@ -14,7 +14,7 @@ export default function Header({menuRef}) {
     // const [isOpened, setIsOpened] = useState(false)
     const [resultMenu, setResultMenu] = useState()
     const [counter, setCounter] = useState(0)
-    const {isActiveMenu, changeStatusMenu, changeStatusDropdown, isOpened} = useContext(MyContext)
+    const {isActiveMenu, changeStatusMenu, changeStatusDropdown, isOpened, setFalseStatus} = useContext(MyContext)
     const [transparent, setTransparent] = useState(false)
     const location = useLocation()
 
@@ -63,7 +63,16 @@ export default function Header({menuRef}) {
             changeStatusDropdown(false)
         }
     }
-    
+
+    useEffect(() => {
+        function resize() {
+            if (window.innerWidth > 1024) setFalseStatus(false)
+        }
+
+        window.addEventListener('resize', resize)
+        return () => window.removeEventListener('resize', resize)
+    }, [])
+
     return (
         <div ref={menuRef} className='flex w-full justify-center'>
             <header style={transparent ? {} : {backgroundColor: "transparent"}} 
@@ -79,7 +88,7 @@ export default function Header({menuRef}) {
                             </li>
                         ))
                     }
-                    <li><Link to='/error'>Демонcтрационный экзамен</Link></li>
+                    <li><Link to='/dem-exam'>Демонcтрационный экзамен</Link></li>
                     <li><Link to='/contacts'>Контакты</Link></li>
                 </ul>
                 <button className='btnBurger flex flex-col gap-[7px] lg:hidden z-10 pointer' onClick={() => {changeStatusMenu(isActiveMenu)}}>

@@ -7,7 +7,8 @@ export default function AccordionMenu({child, name, activeIndex, onAccordionClic
 
     return (
         <li className='flex flex-col'>
-            <span className='bg-mainGray sticky -top-[16px] flex w-full justify-between items-center gap-[2rem] leading-[135%] text-[1.14rem] pb-[1.43rem]' onClick={() => onAccordionClick(index)}>
+            <span className='bg-mainGray sticky -top-[16px] flex w-full justify-between items-center gap-[2rem] leading-[135%] text-[1.14rem] pb-[1.43rem]' 
+                onClick={() => onAccordionClick(index)}>
                 {name}
                 <ArrowBottom style={`${isActive ? '' : '-rotate-90'} origin-center min-w-[19px] duration-300`}/>
             </span>

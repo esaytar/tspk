@@ -10,6 +10,7 @@ import MainInfoPage from '../public/pages/college-info/MainInfoPage'
 import MainBPOOPage from '../public/pages/bpoo-pages/MainBPOOPage'
 import ErrorPage from '../public/pages/ErrorPage'
 import MainTeachersPage from '../public/pages/for-teachers/MainTeachersPage'
+import DemExamPage from '../public/pages/DemExamPage'
 
 export default function App() {
     const {changeStatusDropdown, setFalseStatus} = useContext(MyContext)
@@ -31,6 +32,7 @@ export default function App() {
                 <Route path='/error' element={<ErrorPage/>}></Route>
                 <Route path='/' element={<MainPage/>}></Route>
                 <Route path='/contacts' element={<ContactsPage/>}></Route>
+                <Route path='/dem-exam' element={<DemExamPage/>}></Route>
                 <Route path='/infos/*' element={<MainInfoPage/>}></Route>
                 <Route path='/bpoo/*' element={<MainBPOOPage/>}></Route>
                 <Route path='/teachers/*' element={<MainTeachersPage/>}></Route>
