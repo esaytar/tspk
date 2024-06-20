@@ -23,11 +23,11 @@ export default function MainBPOOPage() {
             <Helmet>
                 <title>Базовая профессиональная образовательная организация | Тольяттинский социально-педагогический колледж</title>
             </Helmet>
-            <div className='w-full lg:rounded-[1.25rem] rounded-[0.71rem]'>
+            <div className='w-full lg:rounded-[1.25rem] rounded-[0.71rem] overflow-hidden'>
                 <img src={mainImg} className='w-full' alt="БПОО ТСПК" />
             </div>
             <div className='w-full px-[2.14rem] py-[1.43rem] rounded-[0.71rem] shadow-newShad 
-                lg:rounded-[2.5rem] lg:px-10 lg:py-5'>
+                lg:rounded-[1.25rem] lg:px-10 lg:py-5'>
                 <p className='text-18'>Базовая профессиональная образовательная организация (БПОО) - профессиональная образовательная организация, обеспечивающая поддержку функционирования региональной системы профессионального образования инвалидов и лиц с ОВЗ в Самарской области. БПОО осуществляет методическое сопровождение организации и реализации профессионального образования в профессиональных образовательных организациях Самарской области.</p>
             </div>
             <HeadingInfoPage 

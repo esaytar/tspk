@@ -1,4 +1,5 @@
-import React, {useState, useEffect, useRef} from 'react'
+import React, {useState, useEffect, useContext } from 'react'
+import {MyContext} from '../../Provider'
 import { Link, useLocation } from "react-router-dom"
 import LogoTSPK from '../../assets/icons/components/LogoTSPK'
 import ArrowBottom from '../../assets/icons/components/ArrowBottom'
@@ -10,13 +11,14 @@ import MenuMobile from '../menu/menuMobile/MenuMobile'
 
 export default function Header({menuRef}) {
     const [isScrolled, setIsScrolled] = useState(false)
-    const [isOpened, setIsOpened] = useState(false)
+    // const [isOpened, setIsOpened] = useState(false)
     const [resultMenu, setResultMenu] = useState()
     const [counter, setCounter] = useState(0)
-    const [isActiveMenu, setIsActive] = useState(false)
-    const linkArray = ['Сведения об образовательной организации', 'Колледж', 'БПОО']
+    const {isActiveMenu, changeStatusMenu, changeStatusDropdown, isOpened} = useContext(MyContext)
     const [transparent, setTransparent] = useState(false)
     const location = useLocation()
+
+    const linkArray = ['Сведения об образовательной организации', 'Колледж', 'БПОО']
 
     useEffect(() => {
         location.pathname !== '/' ? setTransparent(true) : setTransparent(false)
@@ -46,7 +48,7 @@ export default function Header({menuRef}) {
 
     useEffect(() => {
         function handleClickOutside(event) {
-            if (menuRef.current && !menuRef.current.contains(event.target)) setIsOpened(false)
+            if (menuRef.current && !menuRef.current.contains(event.target)) changeStatusDropdown(false)
         }
         document.addEventListener('click', handleClickOutside)
         return () => document.removeEventListener('click', handleClickOutside)
@@ -54,11 +56,11 @@ export default function Header({menuRef}) {
 
     const openDropDownMenu = (e) => {
         setCounter((counter) => counter + 1)
-        setIsOpened(true)
+        changeStatusDropdown(true)
         setResultMenu(e.target.textContent)
         if (counter >= 1 && e.target.textContent === resultMenu) {
             setCounter(0)
-            setIsOpened(false)
+            changeStatusDropdown(false)
         }
     }
     
@@ -80,7 +82,7 @@ export default function Header({menuRef}) {
                     <li><Link to='/error'>Демонcтрационный экзамен</Link></li>
                     <li><Link to='/contacts'>Контакты</Link></li>
                 </ul>
-                <button className='btnBurger flex flex-col gap-[7px] lg:hidden z-10 pointer' onClick={() => {setIsActive(() => !isActiveMenu)}}>
+                <button className='btnBurger flex flex-col gap-[7px] lg:hidden z-10 pointer' onClick={() => {changeStatusMenu(isActiveMenu)}}>
                     <span className="line"></span>
                 </button>
                 <MenuMobile status={isActiveMenu ? 'active ' : ''}/>

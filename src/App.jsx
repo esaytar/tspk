@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useRef} from 'react'
+import React, { useEffect, useState, useRef, useContext} from 'react'
+import {MyContext} from './Provider'
 import { Route, Routes, useLocation } from "react-router-dom"
 import MainPage from '../public/pages/MainPage'
 import Header from './components/Header/Header'
@@ -10,16 +11,16 @@ import MainBPOOPage from '../public/pages/bpoo-pages/MainBPOOPage'
 import ErrorPage from '../public/pages/ErrorPage'
 
 export default function App() {
+    const {changeStatusDropdown, setFalseStatus} = useContext(MyContext)
     const menuRef = useRef(null);
     const location = useLocation()
     const [isMain, setIsMain] = useState(false)
-    // const [isExist, setIsExist] = useState(true)
-    // const domens = ['tspk/', 'tspk/contacts', 'tspk/infos/', 'tspk/bpoo/']
 
     useEffect(() => {
         location.pathname === '/' ? setIsMain(false) : setIsMain(true)
         window.scrollTo(0, 0);
-        
+        setFalseStatus(false)
+        changeStatusDropdown(false)
     }, [location])
 
     return (

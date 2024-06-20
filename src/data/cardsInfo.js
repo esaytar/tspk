@@ -20,57 +20,57 @@ const cardsInfo = [
     {
         name: 'Расписание занятий',
         image: timetable,
-        link: ''
+        link: '/error'
     },
     {
         name: 'Приемная комиссия',
         image: people,
-        link: ''
+        link: '/error'
     },
     {
         name: 'Наши специальности',
         image: bag,
-        link: ''
+        link: '/error'
     },
     {
         name: 'Дополнительное профессиональное образование',
         image: fire,
-        link: ''
+        link: '/error'
     },
     {
         name: 'Проф. мастерство Профессионалы',
         image: wsr,
-        link: ''
+        link: '/error'
     },
     {
         name: 'Дуальное обучение',
         image: puzzle,
-        link: ''
+        link: '/error'
     },
     {
         name: 'Содействие трудойстройству выпускников',
         image: way,
-        link: ''
+        link: '/error'
     },
     {
         name: 'Система дистанционного обучения Moodle',
         image: moodle,
-        link: ''
+        link: 'https://new-moodle.tspk.org/login/index.php'
     },
     {
         name: 'Перечень онлайн курсов',
         image: courses,
-        link: ''
+        link: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRl0KPCK0w3Hmd_iuqzj3sGd0LoQTBNsjNPhS5l5XyK_TiiL-06GUDqQ8ehaZIm_3Ulry-D-2_BJtBL/pubhtml?gid=0&single=true'
     },
     {
         name: 'Электронная система АСУ РСО',
         image: asurso,
-        link: ''
+        link: 'https://spo.asurso.ru/security/#/login'
     },
     {
-        name: `Заказать справку`,
+        name: 'Заказать справку',
         image: docs,
-        link: ''
+        link: 'https://forms.yandex.ru/u/624426f8af261e15d298638a/'
     }
 ]
 
