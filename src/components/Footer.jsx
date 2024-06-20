@@ -27,7 +27,7 @@ export default function Footer() {
                         <nav className="flex flex-col gap-[0.71rem] md:gap-5 text-white">
                             <p className='text-[1.14rem] md:text-[1rem]'><a href="">БПОО</a></p>
                             <BPOOMenu main='text-[0.75rem] gap-2.5' liW='!w-[16rem]'/>
-                            <p className='text-[1.14rem] lg:text-[1rem]'><a href="">Демонстрационный экзамен</a></p>
+                            <p className='text-[1.14rem] lg:text-[1rem]'><Link to="/error">Демонстрационный экзамен</Link></p>
                             <p className='text-[1.14rem] lg:text-[1rem]'><Link to='/contacts'>Контакты</Link></p>
                             <div className='flex gap-5 items-center self-center lg:self-start'>
                                 <VK styles='w-[32px] h-[32px]'/>

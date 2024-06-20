@@ -9,6 +9,7 @@ import MarqueeBlock from './components/MarqueeBlock'
 import MainInfoPage from '../public/pages/college-info/MainInfoPage'
 import MainBPOOPage from '../public/pages/bpoo-pages/MainBPOOPage'
 import ErrorPage from '../public/pages/ErrorPage'
+import MainTeachersPage from '../public/pages/for-teachers/MainTeachersPage'
 
 export default function App() {
     const {changeStatusDropdown, setFalseStatus} = useContext(MyContext)
@@ -32,6 +33,7 @@ export default function App() {
                 <Route path='/contacts' element={<ContactsPage/>}></Route>
                 <Route path='/infos/*' element={<MainInfoPage/>}></Route>
                 <Route path='/bpoo/*' element={<MainBPOOPage/>}></Route>
+                <Route path='/teachers/*' element={<MainTeachersPage/>}></Route>
             </Routes> 
             <MarqueeBlock/>
             <Footer/>

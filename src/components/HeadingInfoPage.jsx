@@ -3,6 +3,7 @@ import ArrowBottom from '../assets/icons/components/ArrowBottom';
 import DataCollegeMenu from '../components/menu/DataCollegeMenu'
 import BPOOMenu from './menu/BPOOMenu';
 import { useLocation } from 'react-router-dom';
+import Teachers from './menu/collegeMenu/Teachers';
 
 export default function HeadingInfoPage({listRef, titleList, titlePage, type}) {
     const [isOpened, setIsOpened] = useState(false)
@@ -22,7 +23,7 @@ export default function HeadingInfoPage({listRef, titleList, titlePage, type}) {
         return () => document.removeEventListener('click', handleClickOutside)
     }, []);
 
-    let listStyles = `${isOpened ? 'flex' : 'hidden'} absolute flex-col  p-[1.43rem] bg-white gap-5 rounded-[1.43rem]
+    let listStyles = `${isOpened ? 'flex' : 'hidden'} absolute flex-col w-full p-[1.43rem] bg-white gap-5 rounded-[1.43rem]
     lg:px-10 lg:py-5 lg:rounded-[2.5rem] z-[15] mt-2.5 shadow-newShad`
 
     return (
@@ -36,6 +37,7 @@ export default function HeadingInfoPage({listRef, titleList, titlePage, type}) {
                 </div>
                 {type === 'bpoo' && <BPOOMenu color="text-mainBlue" main={listStyles}/>}
                 {type === 'main' && <DataCollegeMenu color="text-mainBlue" main={listStyles}/>}
+                {type === 'teachers' && <Teachers color="!text-mainBlue" main={listStyles}/>}
             </div>
         </div>
     )

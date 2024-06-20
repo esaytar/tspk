@@ -1,8 +1,5 @@
 import React from 'react'
 import ArrowBottom from '../../assets/icons/components/ArrowBottom'
-import DataCollegeMenu from './DataCollegeMenu'
-import CollegeMenu from './CollegeMenu'
-import BPOOMenu from './BPOOMenu'
 
 export default function AccordionMenu({child, name, activeIndex, onAccordionClick, index}) { 
 
