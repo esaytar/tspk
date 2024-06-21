@@ -157,7 +157,7 @@ export default function DemExamPage() {
                                                     <img src={demPreview} alt="превью видео" className='w-full' width='' />
                                                     <iframe className='w-full absolute left-0 top-0 h-full' src={i.url} height='480' allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameBorder="0" allowFullScreen></iframe>
                                                 </div>
-                                                <div className='text-mainBlue self-center'>{i.title}</div>
+                                                <div className='text-mainBlue text-center'>{i.title}</div>
                                             </div>
                                         </swiper-slide>
                                     ))
@@ -165,7 +165,6 @@ export default function DemExamPage() {
                             </AccordionDem>
                         ))
                     }
-                    
                 </div>
             </div>
         </>
