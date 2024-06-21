@@ -35,7 +35,7 @@ const cardsInfo = [
     {
         name: 'Дополнительное профессиональное образование',
         image: fire,
-        link: '/error'
+        link: 'http://x927215g.beget.tech/index.html'
     },
     {
         name: 'Проф. мастерство Профессионалы',

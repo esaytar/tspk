@@ -43,7 +43,7 @@ export default function AccordionDem({title, img, children, activeIndex, onAccor
                 </div>
                 <span className={`${styles.plus}`}></span>
             </div>
-            <div className={`w-full rounded-[1.25rem] ${children ? 'p-10' : 'px-10 py-5'}  shadow-newShad ${isActive ? 'block' : 'pointer-events-none -z-100 absolute opacity-0'}`}>
+            <div className={`w-full rounded-[1.25rem] ${children ? 'lg:p-10 px-[2.14rem] py-[1.43rem]' : 'px-[2.14rem] lg:px-10 py-5'} shadow-newShad ${isActive ? 'block' : 'pointer-events-none -z-100 absolute opacity-0'}`}>
                 <div className='w-full overflow-hidden'>
                     {children ? (
                             <swiper-container

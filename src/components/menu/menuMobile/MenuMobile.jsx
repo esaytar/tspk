@@ -47,7 +47,7 @@ export default function MenuMobile({status}) {
                             />
                         ))
                     }
-                    <li className='text-[1.14rem] pb-[1.43rem]'><span></span><Link className="!text-white" to="/error">Демонcтрационный экзамен</Link></li>
+                    <li className='text-[1.14rem] pb-[1.43rem]'><span></span><Link className="!text-white" to="/dem-exam">Демонcтрационный экзамен</Link></li>
                     <li className='text-[1.14rem] pb-[1.43rem]'><span></span><Link className="!text-white" to="/contacts">Контакты</Link></li>
                 </ul>
             </nav>

@@ -11,7 +11,6 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            // Разделить модули из node_modules
             return 'vendor';
           }
         },
