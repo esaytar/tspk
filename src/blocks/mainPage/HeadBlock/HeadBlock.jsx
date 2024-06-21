@@ -23,7 +23,7 @@ export default function HeadBlock() {
                     </div>
                     <div className='flex flex-col gap-5 lg-gap-[1.88rem] items-start leading-[1.32rem]'>
                         <BlueButton styles="px-[1.86rem] py-4 lg:px-9 lg:py-[1.125rem] rounded-[1.88rem] gap-18 text-[1.14rem]">
-                            <a href="http://x927215g.beget.tech/index.html" target="_blank">Инвестируй в своё будущее</a>
+                            <a href="http://x927215g.beget.tech/index.html" target="_blank" rel="noopener">Инвестируй в своё будущее</a>
                             <img src={arrowLong} alt="стрелка вправо" />
                         </BlueButton>
                         <button className='border-white border-[1px] px-[1.86rem] py-4 lg:px-9 lg:py-[1.125rem] rounded-[1.88rem] gap-18 flex text-[1.14rem]'>

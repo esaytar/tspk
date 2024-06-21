@@ -30,7 +30,7 @@ export default function ContactsCard({name, firstNum, secondNum, thirdNum, mail,
                 </li>
                 <li className='flex gap-2.5 items-center'>
                     <Mark fill={fillSVG}/>
-                    <a href={link} target='_blank' className='underline'>{adress}</a>
+                    <a href={link} target='_blank' className='underline' rel="noopener">{adress}</a>
                 </li>
             </ul>
         </div>
