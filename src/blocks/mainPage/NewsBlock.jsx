@@ -24,8 +24,10 @@ export default function NewsBlock() {
                 return findMaxSizes(attachment.video.image, attachment.type)
             case 'doc':
                 return findMaxSizes(attachment.doc.preview.photo.sizes, attachment.type)
+            case 'album':
+                return findMaxSizes(attachment.album.thumb.sizes, attachment.type)
             default:
-                return null
+                return alternative
         }
     }
 
