@@ -19,6 +19,7 @@ input, textarea {outline: none;}
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    min-height: 67.2px;
 }
 
 table td::before {
@@ -47,7 +48,9 @@ tbody::before {line-height: 2rem; content: "\200C"; display: block;}
 :root {font-size: 14px;}
 @media screen and (min-width: 768px) {
     :root {font-size: 15px;}
+    .slider-item__text {min-height: 72px;}
 }
 @media screen and (min-width: 1280px) {
     :root {font-size: 16px;}
+    .slider-item__text {min-width: 76.8px;}
 }
