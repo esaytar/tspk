@@ -12,10 +12,10 @@ import MenuMobile from '../menu/menuMobile/MenuMobile'
 export default function Header({menuRef}) {
     const [isScrolled, setIsScrolled] = useState(false)
     const [resultMenu, setResultMenu] = useState()
-    const [counter, setCounter] = useState(0)
     const {isActiveMenu, changeStatusMenu, changeStatusDropdown, isOpened, setFalseStatus} = useContext(MyContext)
     const [transparent, setTransparent] = useState(false)
     const location = useLocation()
+    let counter = 0
 
     const linkArray = ['Сведения об образовательной организации', 'Колледж', 'БПОО']
 
@@ -54,11 +54,11 @@ export default function Header({menuRef}) {
     }, []);
 
     const openDropDownMenu = (e) => {
-        setCounter((counter) => counter + 1)
+        counter++
         changeStatusDropdown(true)
         setResultMenu(e.target.textContent)
         if (counter >= 1 && e.target.textContent === resultMenu) {
-            setCounter(0)
+            counter = 0
             changeStatusDropdown(false)
         }
     }
@@ -73,7 +73,7 @@ export default function Header({menuRef}) {
     }, [])
 
     return (
-        <div ref={menuRef} className='flex w-full justify-center'>
+        <div ref={menuRef} className='flex w-full justify-center absolute left-0 lg:mt-10'>
             <header style={transparent ? {} : {backgroundColor: "transparent"}} 
             className={`${isScrolled || location.pathname !== '/' ? 'light' : 'dark'} px-[1.88rem] py-[1.25rem] duration-[.2s] w-full flex justify-between items-center fixed z-20 
                 lg:max-w-[80rem] lg:rounded-[1.06rem] lg:px-10 lg:py-5 2xl:max-w-[73%] 2xl:min-w-[84.5rem]`}>

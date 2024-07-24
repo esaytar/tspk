@@ -26,8 +26,9 @@ export default function App() {
     }, [location])
 
     return (
-        <div className={`${isMain ? 'lg:pt-10 ' : ''}w-full flex flex-col items-center gap-[1.43rem] overflow-hidden md:gap-[3.75rem]`}>
-            {isMain && <Header menuRef={menuRef}/>} 
+        <div className={`${isMain ? 'lg:pt-10 ' : ''}w-full flex flex-col items-center gap-[1.43rem] overflow-hidden md:gap-[3.75rem] relative`}>
+            {/* {isMain && <Header }  */}
+            <Header menuRef={menuRef}/>
             <Routes>
                 <Route path='/error' element={<ErrorPage/>}></Route>
                 <Route path='/' element={<MainPage/>}></Route>

@@ -1,5 +1,4 @@
 import React, {useRef} from 'react'
-import Header from '../../../components/Header/Header'
 import './HeadBlock.css'
 import arrowLong from '../../../assets/icons/arrow-long.svg'
 import BlueButton from '../../../components/BlueButton'
@@ -7,14 +6,12 @@ import videoBg from '../../../assets/video_bg.jpg'
 import video from '../../../assets/video.mp4'
 
 export default function HeadBlock() {
-    const menuRef = useRef(null);
-
     return (
         <div className='picture w-full flex flex-col items-center lg:pt-10 lg:pb-[16rem] lg:px-[3rem] relative'>
             {/* <video loop autoPlay muted poster={videoBg} className='absolute top-0 left-0 -z-10 w-full h-full object-cover brightness-50'>
                 <source src={video} type='video/mp4'/>
             </video> */}
-            <Header menuRef={menuRef}/>
+            {/* <Header menuRef={menuRef}/> */}
             <div className='text-white flex gap-[3.625rem] items-center w-full lg:max-w-[87.5rem] py-[9.7rem] lg:pt-[15rem] px-[1.88rem]'>
                 <div className='w-full flex flex-col gap-10 lg:max-w-[29rem]'>
                     <div className='flex flex-col gap-5'>
